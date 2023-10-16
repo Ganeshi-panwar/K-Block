@@ -23,8 +23,6 @@ class HomeViewController: UIViewController {
     @IBOutlet var onOffButtonView: UIView!
     @IBOutlet var colorChangeView: UIView!
     
-
-
     @IBOutlet var numberOfAdBlockedView: UIView!
     
     @IBOutlet var dataTrafficSavingView: UIView!
@@ -34,12 +32,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
        setUIViewBorder()
-       addDashBorderAndBounceAnimation(to: blockAdOnlyBrowserbut, withRadius: 20, andBorderWidth: 2)
-       addDashBorderAndBounceAnimation(to: blockAdApplicationAndBrowser, withRadius: 20, andBorderWidth: 2)
-       blockAdOnlyBrowserbut.addTarget(self, action: #selector(blockAdOnlyBrowserButnTapped), for: .touchUpInside)
-        blockAdApplicationAndBrowser.addTarget(self, action: #selector(blockAdApplicationAndBrowserBtnTapped), for: .touchUpInside)
-   
+        //updateButtonState()
+
+      
 
     }
     
@@ -71,15 +68,29 @@ class HomeViewController: UIViewController {
     @IBAction func monthsTapped(_ sender: UIButton) {
     }
     @IBAction func offButnTappes(_ sender: UIButton) {
+        self.setOnOffButtonColor(sender)
+    
+
        }
     @IBAction func onBtunTapped(_ sender: UIButton) {
-     alert()
+        self.setOnOffButtonColor(sender)
+
     }
     @IBAction func blockAdOnlyBrowserButnTapped(_ sender: UIButton) {
-        addAnimation()
+
+        self.blockAdOnlyBrowserbut.isSelected = true
+        self.blockAdApplicationAndBrowser.isSelected = false
+        self.enableAddBlockButton()
     }
     @IBAction func blockAdApplicationAndBrowserBtnTapped(_ sender: UIButton) {
-        addAnimation()
+       
+    
+
+        self.blockAdOnlyBrowserbut.isSelected = false
+        self.blockAdApplicationAndBrowser.isSelected = true
+        self.enableAddBlockButton()
+        
+        
     }
   
 

@@ -24,13 +24,30 @@ extension UIViewController{
         alert.addAction(action)
         self.present(alert, animated: true)
     }
-   func alert(){
-        let alertController = UIAlertController(title: "K-BLOCK is requesting to add VPN configuration", message: "In order to block ads from K-BLOCK, you will need permission to add VPN configuration", preferredStyle: .alert)
-       let action = UIAlertAction(title: "Deny", style: .cancel)
-       let action1 = UIAlertAction(title: "Allow", style: .destructive)
-       alertController.addAction(action)
-       alertController.addAction(action1)
-       self.present(alertController , animated: true)
+  
+    func showAlertForVPNConfiguration() {
+        // Check if the alert has been shown before
+        if !UserDefaults.standard.bool(forKey: "isVPNConfigurationAlertShown") {
+            let alertController = UIAlertController(title: "K-BLOCK is requesting to add VPN configuration", message: "In order to block ads from K-BLOCK, you will need permission to add VPN configuration", preferredStyle: .alert)
+            
+            let denyAction = UIAlertAction(title: "Deny", style: .cancel) { _ in
+                // Handle Deny action if needed
+            }
+            
+            let allowAction = UIAlertAction(title: "Allow", style: .destructive) { _ in
+                // Open app settings when Allow is clicked
+                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+                }
+                
+                // Set the flag to indicate that the alert has been shown
+                UserDefaults.standard.set(true, forKey: "isVPNConfigurationAlertShown")
+            }
+            
+            alertController.addAction(denyAction)
+            alertController.addAction(allowAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
     }
-   
 }

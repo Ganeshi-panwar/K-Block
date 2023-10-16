@@ -26,6 +26,9 @@ extension UIColor{
     static var lightOrange:UIColor{
         return  UIColor(red: 245/255, green: 178/255, blue: 152/255, alpha: 1)
     }
+    static var simpleOrange:UIColor{
+        return UIColor(red: 255/255, green: 228/255, blue: 221/255, alpha: 1)
+    }
     static var gray:UIColor{
         return UIColor(red: 168/255, green: 161/255, blue: 161/255, alpha: 1)
     }
