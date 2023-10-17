@@ -64,7 +64,6 @@ extension HomeViewController{
     }
     //
     func addDashBorderAndBounceAnimation(to button: UIButton, withRadius radius: CGFloat, andBorderWidth borderWidth: CGFloat) {
-        
         // Create dash border
         let dashBorder = CAShapeLayer()
         dashBorder.strokeColor = UIColor.orange.cgColor
@@ -75,7 +74,6 @@ extension HomeViewController{
         dashBorder.path = path.cgPath
         dashBorder.lineWidth = borderWidth
         button.layer.addSublayer(dashBorder)
-        
         // Dash border animation
         let dashAnimation = CABasicAnimation(keyPath: "lineDashPhase")
         dashAnimation.fromValue = 0
@@ -83,10 +81,6 @@ extension HomeViewController{
         dashAnimation.duration = 0.1
         dashAnimation.repeatCount = .infinity
         dashBorder.add(dashAnimation, forKey: "lineDashPhaseAnimation")
-        addAnimation()
-        
-        // Bounce animation when clicked
-        
     }
     func addAnimation(){
         let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
@@ -96,156 +90,27 @@ extension HomeViewController{
             CAMediaTimingFunction(name: .easeIn),
             CAMediaTimingFunction(name: .easeOut),
             CAMediaTimingFunction(name: .easeIn),
-            CAMediaTimingFunction(name: .easeOut)
-        ]
+            CAMediaTimingFunction(name: .easeOut)]
         bounceAnimation.duration = 0.5
         blockAdOnlyBrowserbut.layer.add(bounceAnimation, forKey: "bounceAnimation")
         blockAdApplicationAndBrowser.layer.add(bounceAnimation, forKey: "bounceAnimation")
-        
-        
-        
+        onButton.layer.add(bounceAnimation, forKey: "bounceAnimation")
+        offButton.layer.add(bounceAnimation, forKey: "bounceAnimation")
+       
     }
     
-    func setOnOffButtonColor(_ sender: UIButton){
-        self.setAdBlockButtonsUI(sender)
-        if sender == onButton{
-            offButton.backgroundColor = UIColor.gray
-            offButton.setTitleColor(UIColor.darkGray, for: .selected)
-            offButton.tintColor = UIColor.darkGray
-            
-            onButton.backgroundColor = UIColor.green
-            onButton.tintColor = UIColor.white
-            onButton.setTitleColor(UIColor.white, for: .normal)
- 
-        }else{
-            onButton.backgroundColor = UIColor.gray
-            onButton.setTitleColor(UIColor.darkGray, for: .normal)
-            onButton.tintColor = UIColor.darkGray
-            
-            offButton.tintColor = UIColor.white
-            offButton.backgroundColor = UIColor.darkOrange
-            offButton.setTitleColor(UIColor.white, for: .normal)
+    func setButtonColors( sender:UIButton , offButton:UIButton){
+        if sender.isSelected == false{
+            sender.backgroundColor = UIColor.green
+            sender.tintColor = UIColor.white
+            sender.setTitleColor(UIColor.white, for: .normal)
+            //
+        }else if sender.isSelected == true {
+            sender.backgroundColor = UIColor.darkOrange
+            sender.tintColor = UIColor.darkGray
+            sender.setTitleColor(UIColor.darkGray, for: .normal)
         }
-    }
+       // if offButton
     
-    func setAdBlockButtonsUI(_ sender: UIButton){
-        if sender == onButton{
-           blockAdOnlyBrowserbut.isEnabled = true
-            blockAdApplicationAndBrowser.isEnabled = false
-            blockAdOnlyBrowserbut.setTitleColor(UIColor.white, for: .normal)
-            blockAdApplicationAndBrowser.setTitleColor(UIColor.white, for: .normal)
-            blockAdOnlyBrowserbut.layer.cornerRadius = 20
-            blockAdApplicationAndBrowser.layer.cornerRadius = 20
-            enableAddBlockButton()
-           
-        }else{
-            blockAdOnlyBrowserbut.isEnabled = false
-            blockAdApplicationAndBrowser.isEnabled = true
-            blockAdOnlyBrowserbut.setTitleColor(UIColor.orange, for: .normal)
-            blockAdOnlyBrowserbut.setTitleColor(UIColor.orange, for: .selected)
-            blockAdApplicationAndBrowser.setTitleColor(UIColor.orange, for: .normal)
-            blockAdOnlyBrowserbut.setTitleColor(UIColor.orange, for: .selected)
-            
-            disableAddBlockButton()
-           
-        }
     }
-    
-    func enableAddBlockButton(){ 
-        if blockAdOnlyBrowserbut.isSelected{
-            blockAdOnlyBrowserbut.backgroundColor = UIColor.darkOrange
-            blockAdOnlyBrowserbut.tintColor = UIColor.white
-            blockAdOnlyBrowserbut.setTitleColor(UIColor.white, for: .selected)
-        }
-            else if blockAdApplicationAndBrowser.isSelected{
-            blockAdApplicationAndBrowser.backgroundColor = UIColor.darkOrange
-            blockAdApplicationAndBrowser.tintColor = UIColor.white
-            blockAdApplicationAndBrowser.setTitleColor(UIColor.white, for: .normal)
-
-            }else{
-                
-                blockAdApplicationAndBrowser.backgroundColor = UIColor.simpleOrange
-                blockAdApplicationAndBrowser.tintColor = UIColor.darkOrange
-                blockAdApplicationAndBrowser.setTitleColor(UIColor.darkOrange, for: .normal)
-          
-
-            blockAdOnlyBrowserbut.backgroundColor = UIColor.simpleOrange
-                blockAdOnlyBrowserbut.tintColor = UIColor.darkOrange
-                blockAdOnlyBrowserbut.setTitleColor(UIColor.darkOrange, for: .selected)
-        }
-
-    }
-    
-    func disableAddBlockButton(){
-        blockAdOnlyBrowserbut.backgroundColor = .white
-        blockAdOnlyBrowserbut.tintColor = .white
-        blockAdOnlyBrowserbut.setTitleColor(UIColor.orange, for: .normal)
-     
-        
-        blockAdApplicationAndBrowser.backgroundColor = .white
-        blockAdApplicationAndBrowser.tintColor = .white
-        blockAdApplicationAndBrowser.setTitleColor(UIColor.orange, for: .normal)
-      
-    }
-//    func onOffButtonColor(_ sender:UIButton){
-//        self.blockAdButtonUI(sender)
-//        if sender == onButton{
-//            offButton.backgroundColor = UIColor.gray
-//            offButton.tintColor = UIColor.gray
-//            offButton.setTitleColor(UIColor.darkGray, for: .normal)
-//
-//            onButton.backgroundColor = UIColor.green
-//            onButton.tintColor = UIColor.green
-//            onButton.setTitleColor(UIColor.white, for: .normal)
-//        }
-//        else{
-//            onButton.backgroundColor = UIColor.green
-//            onButton.tintColor = UIColor.green
-//            onButton.setTitleColor(UIColor.white, for: .normal)
-//
-//            offButton.backgroundColor = UIColor.gray
-//            offButton.tintColor = UIColor.gray
-//            offButton.setTitleColor(UIColor.darkGray, for: .normal)
-//        }
-//
-//
-//    }
-//    func blockAdButtonUI(_ sender:UIButton){
-//        let isEnable = sender == onButton
-//        blockAdOnlyBrowserbut.isEnabled = isEnable
-//        blockAdApplicationAndBrowser.isEnabled = isEnable
-//
-//        let textColor: UIColor = isEnable ? .white : UIColor.lightOrange
-//        let  selectedTextColor: UIColor = isEnable ? .white : UIColor.lightOrange
-//        blockAdOnlyBrowserbut.setTitleColor(textColor, for: .normal)
-//        blockAdApplicationAndBrowser.setTitleColor(selectedTextColor, for: .normal)
-//        if isEnable{
-//            enableBlockAdButton()
-//        }else{
-//            disableBlockAdButton()
-//        }
-//    }
-//    func enableBlockAdButton(){
-//        let selectColor: UIColor =  blockAdOnlyBrowserbut.isSelected ? .darkOrange : .lightOrange
-//        blockAdOnlyBrowserbut.backgroundColor = selectColor
-//        blockAdOnlyBrowserbut.tintColor = selectColor
-//        blockAdOnlyBrowserbut.setTitleColor(.white, for: .selected)
-//
-//        blockAdApplicationAndBrowser.backgroundColor = selectColor
-//        blockAdApplicationAndBrowser.tintColor = selectColor
-//        blockAdOnlyBrowserbut.setTitleColor(UIColor.orange, for: .normal)
-//    }
-//    func disableBlockAdButton(){
-//        blockAdOnlyBrowserbut.backgroundColor = .white
-//        blockAdOnlyBrowserbut.tintColor = .white
-//        blockAdOnlyBrowserbut.setTitleColor(UIColor.orange, for: .normal)
-//
-//        blockAdApplicationAndBrowser.backgroundColor = .white
-//        blockAdApplicationAndBrowser.tintColor = .white
-//        blockAdOnlyBrowserbut.setTitleColor(UIColor.orange, for: .normal)
-//    }
-    
- 
 }
-
-

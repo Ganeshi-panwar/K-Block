@@ -32,12 +32,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
        setUIViewBorder()
-        //updateButtonState()
-
-      
-
+        addDashBorderAndBounceAnimation(to: blockAdApplicationAndBrowser, withRadius: 20, andBorderWidth: 2)
+        addDashBorderAndBounceAnimation(to: blockAdOnlyBrowserbut, withRadius: 20, andBorderWidth: 2)
+ 
+  
     }
     
     @IBAction func Hours24Tapped(_ sender: UIButton) {
@@ -68,28 +67,23 @@ class HomeViewController: UIViewController {
     @IBAction func monthsTapped(_ sender: UIButton) {
     }
     @IBAction func offButnTappes(_ sender: UIButton) {
-        self.setOnOffButtonColor(sender)
-    
+     addAnimation()
+   
 
        }
     @IBAction func onBtunTapped(_ sender: UIButton) {
-        self.setOnOffButtonColor(sender)
+     addAnimation()
+        setButtonColors(onButton)
+     
 
     }
     @IBAction func blockAdOnlyBrowserButnTapped(_ sender: UIButton) {
-
-        self.blockAdOnlyBrowserbut.isSelected = true
-        self.blockAdApplicationAndBrowser.isSelected = false
-        self.enableAddBlockButton()
+       addAnimation()
+     
+    
     }
     @IBAction func blockAdApplicationAndBrowserBtnTapped(_ sender: UIButton) {
-       
-    
-
-        self.blockAdOnlyBrowserbut.isSelected = false
-        self.blockAdApplicationAndBrowser.isSelected = true
-        self.enableAddBlockButton()
-        
+       addAnimation()
         
     }
   
