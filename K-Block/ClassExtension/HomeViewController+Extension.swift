@@ -110,7 +110,7 @@ extension HomeViewController{
             sender.tintColor = UIColor.darkGray
             sender.setTitleColor(UIColor.darkGray, for: .normal)
         }
-       // if offButton
+     print("hi gp")
     
     }
 }
