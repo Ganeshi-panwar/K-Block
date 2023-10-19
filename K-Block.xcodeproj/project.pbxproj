@@ -20,12 +20,17 @@
 		AC66509C2AB9ABDE00CC8661 /* K_BlockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66509B2AB9ABDE00CC8661 /* K_BlockTests.swift */; };
 		AC6650A62AB9ABDE00CC8661 /* K_BlockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6650A52AB9ABDE00CC8661 /* K_BlockUITests.swift */; };
 		AC6650A82AB9ABDE00CC8661 /* K_BlockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6650A72AB9ABDE00CC8661 /* K_BlockUITestsLaunchTests.swift */; };
+		AC682B8B2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC682B8A2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift */; };
+		AC682B8F2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC682B8E2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift */; };
+		AC682B912ADFFAF200FC2665 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC682B902ADFFAF200FC2665 /* UIButton+Extension.swift */; };
+		AC6D31D02AE13AD10044559D /* TolTip+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D31CF2AE13AD10044559D /* TolTip+Extension.swift */; };
 		AC70CB422AC1E65100411C2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70CB402AC1E65100411C2C /* Main.storyboard */; };
-		AC714AA02ADD49A800792F12 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC714A9F2ADD49A800792F12 /* ListTableViewController.swift */; };
+		AC71BD172ADEE67F007D6DA1 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71BD162ADEE67F007D6DA1 /* ListTableViewController.swift */; };
 		AC75D3402ABC9EC00088B845 /* AlertController +Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75D33F2ABC9EC00088B845 /* AlertController +Extension.swift */; };
 		AC75D3422ABC9EFE0088B845 /* String +Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75D3412ABC9EFE0088B845 /* String +Extension.swift */; };
 		AC7848AF2AD52CB900C61B1A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7848AE2AD52CB900C61B1A /* Color+Extension.swift */; };
 		AC7848B52AD5722C00C61B1A /* InstructionVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7848B42AD5722C00C61B1A /* InstructionVC+Extension.swift */; };
+		ACFE611B2ADFB5790089DECB /* WhiteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE611A2ADFB5790089DECB /* WhiteListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +68,17 @@
 		AC6650A12AB9ABDE00CC8661 /* K-BlockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "K-BlockUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6650A52AB9ABDE00CC8661 /* K_BlockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K_BlockUITests.swift; sourceTree = "<group>"; };
 		AC6650A72AB9ABDE00CC8661 /* K_BlockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K_BlockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC682B8A2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhiteListViewController+Extension.swift"; sourceTree = "<group>"; };
+		AC682B8E2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteListTableViewCell.swift; sourceTree = "<group>"; };
+		AC682B902ADFFAF200FC2665 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		AC6D31CF2AE13AD10044559D /* TolTip+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TolTip+Extension.swift"; sourceTree = "<group>"; };
 		AC70CB412AC1E65100411C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC714A9F2ADD49A800792F12 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		AC71BD162ADEE67F007D6DA1 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		AC75D33F2ABC9EC00088B845 /* AlertController +Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController +Extension.swift"; sourceTree = "<group>"; };
 		AC75D3412ABC9EFE0088B845 /* String +Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String +Extension.swift"; sourceTree = "<group>"; };
 		AC7848AE2AD52CB900C61B1A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		AC7848B42AD5722C00C61B1A /* InstructionVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstructionVC+Extension.swift"; sourceTree = "<group>"; };
+		ACFE611A2ADFB5790089DECB /* WhiteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +114,8 @@
 				AC1FCF332ABC1A14002176A5 /* AuthenticationViewController.swift */,
 				AC5A61A92AC1ABB800844DFF /* InstructionViewController.swift */,
 				AC2D63A32AC441DF00476646 /* HomeViewController.swift */,
-				AC714A9F2ADD49A800792F12 /* ListTableViewController.swift */,
+				AC71BD162ADEE67F007D6DA1 /* ListTableViewController.swift */,
+				ACFE611A2ADFB5790089DECB /* WhiteListViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 		AC6650802AB9ABD500CC8661 /* K-Block */ = {
 			isa = PBXGroup;
 			children = (
+				AC682B8C2ADFBF3A00FC2665 /* CostomClasses */,
 				AC75D33E2ABC9E600088B845 /* Extension */,
 				AC7848B02AD5494300C61B1A /* Model */,
 				AC1FCF302ABC1299002176A5 /* View */,
@@ -171,12 +183,30 @@
 			path = "K-BlockUITests";
 			sourceTree = "<group>";
 		};
+		AC682B8C2ADFBF3A00FC2665 /* CostomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				AC682B8D2ADFBF9500FC2665 /* CustomTableViewCell */,
+			);
+			name = CostomClasses;
+			sourceTree = "<group>";
+		};
+		AC682B8D2ADFBF9500FC2665 /* CustomTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AC682B8E2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift */,
+			);
+			path = CustomTableViewCell;
+			sourceTree = "<group>";
+		};
 		AC75D33E2ABC9E600088B845 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				AC75D33F2ABC9EC00088B845 /* AlertController +Extension.swift */,
 				AC75D3412ABC9EFE0088B845 /* String +Extension.swift */,
 				AC7848AE2AD52CB900C61B1A /* Color+Extension.swift */,
+				AC682B902ADFFAF200FC2665 /* UIButton+Extension.swift */,
+				AC6D31CF2AE13AD10044559D /* TolTip+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -193,6 +223,7 @@
 			children = (
 				AC7848B42AD5722C00C61B1A /* InstructionVC+Extension.swift */,
 				AC1A10B52AD6A14E0014EBEF /* HomeViewController+Extension.swift */,
+				AC682B8A2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift */,
 			);
 			path = ClassExtension;
 			sourceTree = "<group>";
@@ -328,12 +359,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFE611B2ADFB5790089DECB /* WhiteListViewController.swift in Sources */,
+				AC682B8B2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift in Sources */,
 				AC1FCF322ABC1300002176A5 /* LogInViewController.swift in Sources */,
+				AC682B912ADFFAF200FC2665 /* UIButton+Extension.swift in Sources */,
 				AC7848AF2AD52CB900C61B1A /* Color+Extension.swift in Sources */,
 				AC75D3422ABC9EFE0088B845 /* String +Extension.swift in Sources */,
 				AC7848B52AD5722C00C61B1A /* InstructionVC+Extension.swift in Sources */,
 				AC66508C2AB9ABD500CC8661 /* K_Block.xcdatamodeld in Sources */,
-				AC714AA02ADD49A800792F12 /* ListTableViewController.swift in Sources */,
+				AC682B8F2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift in Sources */,
+				AC6D31D02AE13AD10044559D /* TolTip+Extension.swift in Sources */,
+				AC71BD172ADEE67F007D6DA1 /* ListTableViewController.swift in Sources */,
 				AC1A10B62AD6A14E0014EBEF /* HomeViewController+Extension.swift in Sources */,
 				AC5A61AA2AC1ABB800844DFF /* InstructionViewController.swift in Sources */,
 				AC1FCF342ABC1A14002176A5 /* AuthenticationViewController.swift in Sources */,

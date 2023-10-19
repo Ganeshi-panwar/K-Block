@@ -73,7 +73,7 @@ class HomeViewController: UIViewController {
        }
     @IBAction func onBtunTapped(_ sender: UIButton) {
      addAnimation()
-        setButtonColors(onButton)
+       // setButtonColors(onButton)
      
 
     }

@@ -50,4 +50,40 @@ extension UIViewController{
             present(alertController, animated: true, completion: nil)
         }
     }
-}
+ 
+
+        func showCustomTooltip() {
+            let alertController = UIAlertController(title: "Add Something", message: "Enter your text:", preferredStyle: .actionSheet) // Using .actionSheet for tooltip-like behavior
+            
+            // Add a text field to the alert
+            alertController.addTextField { textField in
+                textField.placeholder = "Type here"
+            }
+            
+            // Add "Cancel" button
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            // Add "Add" button
+            let addAction = UIAlertAction(title: "Add", style: .default) { action in
+                // Handle the "Add" button action
+                if let text = alertController.textFields?.first?.text {
+                    // Do something with the entered text
+                    print("You entered: \(text)")
+                }
+            }
+            alertController.addAction(addAction)
+            
+            // For iPad, specify the anchor point for the popover
+            if let popoverController = alertController.popoverPresentationController {
+                popoverController.sourceView = view
+                popoverController.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.midY, width: 0, height: 0)
+                popoverController.permittedArrowDirections = []
+            }
+            
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+
+
+
