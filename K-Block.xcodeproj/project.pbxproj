@@ -24,6 +24,7 @@
 		AC682B8F2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC682B8E2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift */; };
 		AC682B912ADFFAF200FC2665 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC682B902ADFFAF200FC2665 /* UIButton+Extension.swift */; };
 		AC6D31D02AE13AD10044559D /* TolTip+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D31CF2AE13AD10044559D /* TolTip+Extension.swift */; };
+		AC6F32BE2AE927FB00DF471C /* BlackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F32BD2AE927FB00DF471C /* BlackListViewController.swift */; };
 		AC70CB422AC1E65100411C2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70CB402AC1E65100411C2C /* Main.storyboard */; };
 		AC71BD172ADEE67F007D6DA1 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71BD162ADEE67F007D6DA1 /* ListTableViewController.swift */; };
 		AC75D3402ABC9EC00088B845 /* AlertController +Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75D33F2ABC9EC00088B845 /* AlertController +Extension.swift */; };
@@ -72,6 +73,7 @@
 		AC682B8E2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteListTableViewCell.swift; sourceTree = "<group>"; };
 		AC682B902ADFFAF200FC2665 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		AC6D31CF2AE13AD10044559D /* TolTip+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TolTip+Extension.swift"; sourceTree = "<group>"; };
+		AC6F32BD2AE927FB00DF471C /* BlackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackListViewController.swift; sourceTree = "<group>"; };
 		AC70CB412AC1E65100411C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC71BD162ADEE67F007D6DA1 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		AC75D33F2ABC9EC00088B845 /* AlertController +Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController +Extension.swift"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				AC2D63A32AC441DF00476646 /* HomeViewController.swift */,
 				AC71BD162ADEE67F007D6DA1 /* ListTableViewController.swift */,
 				ACFE611A2ADFB5790089DECB /* WhiteListViewController.swift */,
+				AC6F32BD2AE927FB00DF471C /* BlackListViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			files = (
 				ACFE611B2ADFB5790089DECB /* WhiteListViewController.swift in Sources */,
 				AC682B8B2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift in Sources */,
+				AC6F32BE2AE927FB00DF471C /* BlackListViewController.swift in Sources */,
 				AC1FCF322ABC1300002176A5 /* LogInViewController.swift in Sources */,
 				AC682B912ADFFAF200FC2665 /* UIButton+Extension.swift in Sources */,
 				AC7848AF2AD52CB900C61B1A /* Color+Extension.swift in Sources */,

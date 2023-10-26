@@ -94,23 +94,8 @@ extension HomeViewController{
         bounceAnimation.duration = 0.5
         blockAdOnlyBrowserbut.layer.add(bounceAnimation, forKey: "bounceAnimation")
         blockAdApplicationAndBrowser.layer.add(bounceAnimation, forKey: "bounceAnimation")
-        onButton.layer.add(bounceAnimation, forKey: "bounceAnimation")
-        offButton.layer.add(bounceAnimation, forKey: "bounceAnimation")
-       
+//        onButton.layer.add(bounceAnimation, forKey: "bounceAnimation")
+//        offButton.layer.add(bounceAnimation, forKey: "bounceAnimation")
     }
-    
-    func setButtonColors( sender:UIButton , offButton:UIButton){
-        if sender.isSelected == false{
-            sender.backgroundColor = UIColor.green
-            sender.tintColor = UIColor.white
-            sender.setTitleColor(UIColor.white, for: .normal)
-            //
-        }else if sender.isSelected == true {
-            sender.backgroundColor = UIColor.darkOrange
-            sender.tintColor = UIColor.darkGray
-            sender.setTitleColor(UIColor.darkGray, for: .normal)
-        }
-     print("hi gp")
-    
-    }
+ 
 }

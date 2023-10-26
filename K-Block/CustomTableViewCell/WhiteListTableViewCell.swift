@@ -12,32 +12,43 @@ class WhiteListTableViewCell: UITableViewCell {
     @IBOutlet var checkButton: UIButton!
     
     @IBOutlet var domainLabal: UILabel!
+    var strDomain:String!
+    // var strCheck:String
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-      //  var strinDomain:String? = domainLabal:String!
-        
-//        checkButton.layer.cornerRadius = 20
-//        checkButton.backgroundColor = UIColor.green
-        checkButton.setImage(UIImage(named: "list_icon-uncheck"), for: .normal)
-        checkButton.setImage(UIImage(named: "list_icon_check"), for: .selected)
+        domainLabal.text = strDomain
+        checkButton.isHidden  = true
+             checkButton.setImage(UIImage(named: "list_icon_check"), for: .selected)
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     @IBAction func checkBtnTapped(_ sender: UIButton) {
         print("hi")
-        checkButton.isHidden = true
+        
+        addCheck(sender: sender)
         
     }
     
     @IBAction func switchBtnTapped(_ sender: UISwitch) {
         
     }
-   
     
+    
+    
+    func addCheck(sender:UIButton){
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected{
+            checkButton.setImage(UIImage(named: "list_icon_check"), for: .normal)
+        }else{
+            checkButton.setImage(UIImage(named: "list_icon-uncheck"), for: .normal)
+        }
+        
+    }
 }
+    
+

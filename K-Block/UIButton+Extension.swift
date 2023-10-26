@@ -16,6 +16,8 @@ extension WhiteListViewController{
         addButton.backgroundColor = UIColor.clear
         addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         view.addSubview(addButton)
+        
     }
 
 }
+      
