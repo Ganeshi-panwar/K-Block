@@ -8,6 +8,7 @@
 import UIKit
 
 class BlackListViewController: UIViewController {
+    var ganeshi:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
