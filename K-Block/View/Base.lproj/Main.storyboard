@@ -901,19 +901,17 @@
                                     <outlet property="delegate" destination="YYz-Cl-Ivv" id="Zji-Ll-PuR"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-kI-elq" userLabel="Bottom Button View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-kI-elq" userLabel="Bottom Button View" customClass="WhiteListV">
                                 <rect key="frame" x="0.0" y="729" width="375" height="0.0"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTK-72-pcq">
-                                        <rect key="frame" x="30" y="0.0" width="80" height="0.0"/>
+                                        <rect key="frame" x="30" y="0.0" width="60" height="0.0"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="jnZ-ob-tOj"/>
-                                            <constraint firstAttribute="height" id="lCG-Q8-TIl"/>
+                                            <constraint firstAttribute="width" constant="60" id="jnZ-ob-tOj"/>
+                                            <constraint firstAttribute="height" id="lLU-rP-Nsi"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="1">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="deleteButtonTapped:" destination="YYz-Cl-Ivv" eventType="touchUpInside" id="MP4-AN-VT6"/>
                                         </connections>
@@ -954,7 +952,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bottomView" destination="5xc-kI-elq" id="TkY-ME-jbx"/>
+                        <outlet property="bottonViewHeight" destination="lZ8-5i-MCa" id="nvP-U9-xgq"/>
                         <outlet property="deleteButton" destination="eTK-72-pcq" id="q9G-8K-blu"/>
+                        <outlet property="deleteButtonHeight" destination="lLU-rP-Nsi" id="4qc-fR-tcW"/>
                         <outlet property="tableView" destination="bg8-Ig-6FS" id="nbr-V8-isN"/>
                     </connections>
                 </viewController>
@@ -974,7 +974,7 @@
                                 <rect key="frame" x="0.0" y="91" width="375" height="638"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zr8-or-2R3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BlackListTableViewCell" id="zr8-or-2R3" customClass="BlackListTableViewCell" customModule="K_Block" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zr8-or-2R3" id="LD8-cU-7bW">
@@ -989,6 +989,9 @@
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="list_icon-uncheck"/>
+                                                    <connections>
+                                                        <action selector="checkBlackListButtonTapped:" destination="zr8-or-2R3" eventType="touchUpInside" id="3DB-v9-UpN"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hfyfuyfyuffyufyfhgc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4S-Zt-Vzy">
                                                     <rect key="frame" x="56.000000000000014" y="11.333333333333336" width="151.33333333333337" height="21"/>
@@ -1009,6 +1012,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="PFk-rT-bqR" secondAttribute="trailing" constant="9" id="rBT-cd-qz5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="blackListDomain" destination="i4S-Zt-Vzy" id="YeG-lp-mxS"/>
+                                            <outlet property="blackListSwitch" destination="PFk-rT-bqR" id="fmI-Nx-fe6"/>
+                                            <outlet property="chechButton" destination="cMf-vg-Az9" id="Mu7-iV-09o"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1027,9 +1035,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Black List" id="oPI-OG-e8P">
-                        <barButtonItem key="leftBarButtonItem" image="backButton" id="XAs-gL-D7c"/>
-                        <barButtonItem key="rightBarButtonItem" image="header_more_icon" id="jsJ-S8-ndy"/>
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="XAs-gL-D7c">
+                            <connections>
+                                <action selector="backButton:" destination="XOx-TJ-bxZ" id="Uzh-Vg-s7Q"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="header_more_icon" id="jsJ-S8-ndy">
+                            <connections>
+                                <action selector="editButton:" destination="XOx-TJ-bxZ" id="1Wq-Ax-kXp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="RI2-oq-6Ds" id="1Nm-50-yPb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayI-At-acP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1139,7 +1158,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="344.66666666666669" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register web pages that you do not want to back." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-mP-w3K">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register web pages that you do not want to block." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-mP-w3K">
                                                     <rect key="frame" x="20" y="33" width="317" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
