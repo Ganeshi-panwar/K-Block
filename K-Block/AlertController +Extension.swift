@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 extension UIViewController{
- 
+    
     func openAlert(title:String , message:String , cancel:String , destructive:String ){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAcction = UIAlertAction(title: cancel, style: .cancel)
@@ -24,7 +24,7 @@ extension UIViewController{
         alert.addAction(action)
         self.present(alert, animated: true)
     }
-  
+    
     func showAlertForVPNConfiguration() {
         // Check if the alert has been shown before
         if !UserDefaults.standard.bool(forKey: "isVPNConfigurationAlertShown") {
@@ -50,40 +50,61 @@ extension UIViewController{
             present(alertController, animated: true, completion: nil)
         }
     }
- 
-
-        func showCustomTooltip() {
-            let alertController = UIAlertController(title: "Add Something", message: "Enter your text:", preferredStyle: .actionSheet) // Using .actionSheet for tooltip-like behavior
-            
-            // Add a text field to the alert
-            alertController.addTextField { textField in
-                textField.placeholder = "Type here"
-            }
-            
-            // Add "Cancel" button
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alertController.addAction(cancelAction)
-            
-            // Add "Add" button
-            let addAction = UIAlertAction(title: "Add", style: .default) { action in
-                // Handle the "Add" button action
-                if let text = alertController.textFields?.first?.text {
-                    // Do something with the entered text
-                    print("You entered: \(text)")
-                }
-            }
-            alertController.addAction(addAction)
-            
-            // For iPad, specify the anchor point for the popover
-            if let popoverController = alertController.popoverPresentationController {
-                popoverController.sourceView = view
-                popoverController.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.midY, width: 0, height: 0)
-                popoverController.permittedArrowDirections = []
-            }
-            
-            present(alertController, animated: true, completion: nil)
+    
+    
+    func showCustomTooltip() {
+        let alertController = UIAlertController(title: "Add Something", message: "Enter your text:", preferredStyle: .actionSheet) // Using .actionSheet for tooltip-like behavior
+        
+        // Add a text field to the alert
+        alertController.addTextField { textField in
+            textField.placeholder = "Type here"
         }
+        
+        // Add "Cancel" button
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // Add "Add" button
+        let addAction = UIAlertAction(title: "Add", style: .default) { action in
+            // Handle the "Add" button action
+            if let text = alertController.textFields?.first?.text {
+                // Do something with the entered text
+                print("You entered: \(text)")
+            }
+        }
+        alertController.addAction(addAction)
+        
+        // For iPad, specify the anchor point for the popover
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = view
+            popoverController.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+        present(alertController, animated: true, completion: nil)
     }
-
-
-
+    
+    func showAlertForAddingDomain(completion: @escaping (String) -> Void) {
+        let uiAlert = UIAlertController(title: "Add blocklist", message: "Enter the domain you want to block", preferredStyle: .alert)
+        
+        uiAlert.addTextField { textField in
+            textField.placeholder = "blacklist.com"
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            // Handle cancel action if needed
+        }
+        
+        let save = UIAlertAction(title: "Add", style: .destructive) { action in
+            if let textField = uiAlert.textFields?.first,
+               let enteredDomain = textField.text, !enteredDomain.isEmpty {
+                completion(enteredDomain)
+            }
+        }
+        
+        uiAlert.addAction(save)
+        uiAlert.addAction(cancel)
+        
+        present(uiAlert, animated: true)
+    }
+    
+}

@@ -8,23 +8,33 @@
 import UIKit
 
 class BlackListViewController: UIViewController {
-    var ganeshi:String = ""
-
+    let addBlackListButton = UIButton()
+    var blackListArr = [String] ()
+   // var blackListArr = ["1","2","3","4"]
+   
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setBlackListButton()
+        addBlackListButton.layer.cornerRadius = 10
+        //addBlackListButton.layer.masksToBounds = true
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
-
+    
+    @IBAction func editButton(_ sender: UIBarButtonItem) {
+    }
+    
+    @objc func addButtonBlackListTapped(){
+        
+        showAlertForAddingDomain { enterDomain in
+            print("Enter Domain\(enterDomain)")
+            self.blackListArr.append(enterDomain)
+            self.tableView.reloadData()
+        }
+    }
 }
