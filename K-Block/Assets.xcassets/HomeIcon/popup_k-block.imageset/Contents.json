@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "popup_k-block.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "popup_k-block.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

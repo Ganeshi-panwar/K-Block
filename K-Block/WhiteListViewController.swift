@@ -10,25 +10,22 @@ import UIKit
 class WhiteListViewController: UIViewController {
     let customView = UIView()
     let customDeleteButton = UIButton ()
-    
     let addButton = UIButton()
-    //   var cNameText:UITextField!
     var whiteListAry = [String]()
     var deleteIndex = [Int]()
     var isEdit:Bool = true
     
-   
-    @IBOutlet var bottomView: UIView!
     
+    @IBOutlet var bottomView: UIView!
     @IBOutlet var deleteButtonHeight: NSLayoutConstraint!
     @IBOutlet var bottonViewHeight: NSLayoutConstraint!
     @IBOutlet var deleteButton: UIButton!
     @IBOutlet var tableView: UITableView!
- 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-           setCustomView()
+        setCustomView()
         customView.isHidden = true
         deleteButton.layer.cornerRadius = 10
         deleteButton.layer.masksToBounds = true
@@ -96,32 +93,32 @@ class WhiteListViewController: UIViewController {
     }
     
     
- //   @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        //        whiteListAry.remove(elementsAtIndices: deleteIndex)
-        //        deleteIndex.removeAll()
-        //        print(deleteIndex)
-        //        tableView.reloadData()
-        //        let seconds = 0.2
-        //        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-        //            UIView.animate(withDuration: 0.3, animations: { () -> Void in
-        //                self.bottonViewHeight.constant = 0
-        //                self.deleteButtonHeight.constant = 0
-        //                self.view.layoutIfNeeded()
-        //            })
-  //  }
+    //   @IBAction func deleteButtonTapped(_ sender: UIButton) {
+    //        whiteListAry.remove(elementsAtIndices: deleteIndex)
+    //        deleteIndex.removeAll()
+    //        print(deleteIndex)
+    //        tableView.reloadData()
+    //        let seconds = 0.2
+    //        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+    //            UIView.animate(withDuration: 0.3, animations: { () -> Void in
+    //                self.bottonViewHeight.constant = 0
+    //                self.deleteButtonHeight.constant = 0
+    //                self.view.layoutIfNeeded()
+    //            })
+    //  }
     
-        @objc func deleteButtonTapped(){
-            print("ggggggggggg")
-            whiteListAry.remove(elementsAtIndices: deleteIndex)
-            deleteIndex.removeAll()
-            print(deleteIndex)
-            tableView.reloadData()
-//            let seconds = 0.2
-//            DispatchQueue.main.asyncAfter(deadline: .now(), execute: + seconds){
-//
-//            }
-    
-        }
+    @objc func deleteButtonTapped(){
+        print("ggggggggggg")
+        whiteListAry.remove(elementsAtIndices: deleteIndex)
+        deleteIndex.removeAll()
+        print(deleteIndex)
+        tableView.reloadData()
+        //            let seconds = 0.2
+        //            DispatchQueue.main.asyncAfter(deadline: .now(), execute: + seconds){
+        //
+        //            }
+        
+    }
     
     
 }

@@ -43,22 +43,22 @@ extension WhiteListViewController:WhiteListCellDelegate{
                 deleteIndex.removeAll(where: {$0 == checkButton.tag})
             }
         }
-        if deleteIndex.count > 0{
-            UIView.animate(withDuration: 2.0, animations: { () -> Void in
-                self.bottomView.backgroundColor = UIColor.green
-                self.bottonViewHeight.constant = 120
-                self.deleteButtonHeight.constant = 30
-                
-                self.view.layoutIfNeeded()
-            })
-        }else{
-            UIView.animate(withDuration: 0.3, animations: {() -> Void in
-                self.bottonViewHeight.constant = 100
-                self.deleteButtonHeight.constant = 10
-                self.view.layoutIfNeeded()
-                
-            })
-        }
+   //     if deleteIndex.count > 0{
+//            UIView.animate(withDuration: 2.0, animations: { () -> Void in
+//                self.bottomView.backgroundColor = UIColor.green
+//                self.bottonViewHeight.constant = 120
+//                self.deleteButtonHeight.constant = 30
+//
+//                self.view.layoutIfNeeded()
+//            })
+//        }else{
+//            UIView.animate(withDuration: 0.3, animations: {() -> Void in
+//                self.bottonViewHeight.constant = 100
+//                self.deleteButtonHeight.constant = 10
+//                self.view.layoutIfNeeded()
+//
+//            })
+//        }
     }
     
         func setCustomView(){
