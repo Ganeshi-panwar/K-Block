@@ -9,8 +9,8 @@ import UIKit
 
 class BlackListViewController: UIViewController {
     let addBlackListButton = UIButton()
-   // var blackListArr = [String] ()
-    var blackListArr = ["1","2","3","4"]
+    var blackListArr = [String] ()
+   // var blackListArr = ["1","2","3","4"]
    
     @IBOutlet var tableView: UITableView!
     
@@ -31,6 +31,10 @@ class BlackListViewController: UIViewController {
     
     @objc func addButtonBlackListTapped(){
         
-        
+        showAlertForAddingDomain { enterDomain in
+            print("Enter Domain\(enterDomain)")
+            self.blackListArr.append(enterDomain)
+            self.tableView.reloadData()
+        }
     }
 }
