@@ -20,11 +20,12 @@ extension HomeViewController{
         //        outerView.layer.shadowRadius = 10.0
         //        outerView.layer.masksToBounds = false
         
-        outerView.layer.masksToBounds = false
+        outerView.layer.masksToBounds = true
         outerView.layer.shadowOffset = CGSize(width: 1, height: 2)
         outerView.layer.shadowRadius = 4
         outerView.layer.shadowOpacity = 2
         outerView.layer.cornerRadius = 20
+        
         
         
         
@@ -97,5 +98,58 @@ extension HomeViewController{
 //        onButton.layer.add(bounceAnimation, forKey: "bounceAnimation")
 //        offButton.layer.add(bounceAnimation, forKey: "bounceAnimation")
     }
+    func ofButton(){
+        onButton.backgroundColor = UIColor.darkGray
+        offButton.backgroundColor = UIColor.darkOrange
+        blockAdOnlyBrowserbut.isSelected = false
+        blockAdApplicationAndBrowser.isSelected = false
+        blockAdOnlyBrowserbut.backgroundColor = UIColor.clear
+        blockAdApplicationAndBrowser.backgroundColor = UIColor.clear
+    }
+    
+    
+    func onButton(sender:UIButton){
+        sender.isSelected = !sender.isSelected
+        if onButton.isSelected  {
+            onButton.backgroundColor = UIColor.darkGreen
+           
+            
+                // On button is selected, activate other buttons
+                blockAdOnlyBrowserButnTapped(blockAdOnlyBrowserbut)
+                blockAdApplicationAndBrowserBtnTapped(blockAdApplicationAndBrowser)
+          
+            } else {
+                offButton.backgroundColor = UIColor.lightGray
+                // On button is deselected, deactivate other buttons
+                blockAdOnlyBrowserbut.isSelected = false
+                blockAdApplicationAndBrowser.isSelected = false
+                blockAdOnlyBrowserbut.backgroundColor = UIColor.clear
+                blockAdApplicationAndBrowser.backgroundColor = UIColor.clear
+            }
+    }
+    func blockAdOnlyBrowserButn(){
+        if onButton.isSelected == true{
+                blockAdOnlyBrowserbut.isSelected.toggle()
+                blockAdOnlyBrowserbut.backgroundColor = blockAdOnlyBrowserbut.isSelected ? UIColor.darkOrange : UIColor.clear
+                blockAdApplicationAndBrowser.isSelected = false
+                blockAdApplicationAndBrowser.backgroundColor = UIColor.clear
+            blockAdOnlyBrowserbut.layer.cornerRadius = 20
+    
+            }
+
+    }
+    func blockAdApplicationAndBrowserBtn(){
+        // Additional logic to update colors
+     
+        if onButton.isSelected == true {
+            blockAdApplicationAndBrowser.isSelected.toggle()
+            blockAdApplicationAndBrowser.backgroundColor = blockAdApplicationAndBrowser.isSelected ? UIColor.darkOrange : UIColor.clear
+            blockAdOnlyBrowserbut.isSelected = false
+            blockAdOnlyBrowserbut.backgroundColor = UIColor.clear
+            blockAdApplicationAndBrowser.layer.cornerRadius = 20
+        }
+ }
  
-}
+    }
+ 
+

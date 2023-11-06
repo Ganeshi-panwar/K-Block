@@ -35,21 +35,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        blockAdOnlyBrowserbut.layer.cornerRadius = 20
-//        blockAdApplicationAndBrowser.layer.cornerRadius = 20
-//        blockAdOnlyBrowserbut.backgroundColor = UIColor.clear
-//        blockAdOnlyBrowserbut.isSelected = false
-//        blockAdApplicationAndBrowser.isSelected = false
-//
-       setUIViewBorder()
+        setUIViewBorder()
         addDashBorderAndBounceAnimation(to: blockAdApplicationAndBrowser, withRadius: 20, andBorderWidth: 2)
         addDashBorderAndBounceAnimation(to: blockAdOnlyBrowserbut, withRadius: 20, andBorderWidth: 2)
- 
-  
+        
+        
     }
     
     @IBAction func Hours24Tapped(_ sender: UIButton) {
-      
+        
         for button in switching{
             button.isSelected = false
             button.backgroundColor = UIColor.lightGray
@@ -70,7 +64,7 @@ class HomeViewController: UIViewController {
         
         showNumberOfAdBlock.text = "20"
         showDataTraffic.text = "2MB"
-      
+        
         
     }
     @IBAction func week1Tapped(_ sender: UIButton) {
@@ -85,54 +79,30 @@ class HomeViewController: UIViewController {
         showNumberOfAdBlock.text = "200"
         showDataTraffic.text = "50MB"
     }
+    
+    
+    
     @IBAction func offButnTappes(_ sender: UIButton) {
-        offButton.backgroundColor = UIColor.darkGray
-        blockAdOnlyBrowserbut.isSelected = false
-           blockAdApplicationAndBrowser.isSelected = false
-           blockAdOnlyBrowserbut.backgroundColor = UIColor.clear
-           blockAdApplicationAndBrowser.backgroundColor = UIColor.clear
-       
-       }
+        ofButton()
+        
+        
+    }
     @IBAction func onBtunTapped(_ sender: UIButton) {
-      
-        if onButton.isSelected {
-            onButton.backgroundColor = UIColor.green
-                // On button is selected, activate other buttons
-                blockAdOnlyBrowserButnTapped(blockAdOnlyBrowserbut)
-                blockAdApplicationAndBrowserBtnTapped(blockAdApplicationAndBrowser)
-            } else {
-                // On button is deselected, deactivate other buttons
-                blockAdOnlyBrowserbut.isSelected = false
-                blockAdApplicationAndBrowser.isSelected = false
-                blockAdOnlyBrowserbut.backgroundColor = UIColor.clear
-                blockAdApplicationAndBrowser.backgroundColor = UIColor.clear
-            }
-
+        onButton(sender: onButton)
+        showAlertForVPNConfiguration()
+        
     }
     @IBAction func blockAdOnlyBrowserButnTapped(_ sender: UIButton) {
-       addAnimation()
-        if onButton.isSelected {
-                blockAdOnlyBrowserbut.isSelected.toggle()
-                blockAdOnlyBrowserbut.backgroundColor = blockAdOnlyBrowserbut.isSelected ? UIColor.darkOrange : UIColor.clear
-                blockAdApplicationAndBrowser.isSelected = false
-                blockAdApplicationAndBrowser.backgroundColor = UIColor.clear
-            }
-
-     
-    
+        addAnimation()
+        blockAdOnlyBrowserButn()
+        
+        
     }
     @IBAction func blockAdApplicationAndBrowserBtnTapped(_ sender: UIButton) {
         addAnimation()
-           
-           // Additional logic to update colors
-           if onButton.isSelected {
-               blockAdApplicationAndBrowser.isSelected.toggle()
-               blockAdApplicationAndBrowser.backgroundColor = blockAdApplicationAndBrowser.isSelected ? UIColor.lightOrange : UIColor.clear
-               blockAdOnlyBrowserbut.isSelected = false
-               blockAdOnlyBrowserbut.backgroundColor = UIColor.clear
-           }
+        blockAdApplicationAndBrowserBtn()
+        
+        
     }
     
-
 }
-

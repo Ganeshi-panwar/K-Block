@@ -71,12 +71,22 @@ class WhiteListViewController: UIViewController {
         // Call the function
         showAlertForAddingDomain { enteredDomain in
             // Handle the entered domain
-            print("Entered domain: \(enteredDomain)")
-            
+            if let enteredDomain = enteredDomain{
+                if enteredDomain == nil{
+                    print("Enter Domin \(enteredDomain)")
+                    self.whiteListAry.append(enteredDomain)
+                    self.tableView.reloadData()
+                    UserDefaults.standard.set(self.whiteListAry, forKey: "whiteListAry")
+                }
+            }else {
+                print("User canceled or entered an empty domain.")
+            }
+//            print("Entered domain: \(enteredDomain)")
+
             // Add the entered domain to the array, reload the table view, etc.
-            self.whiteListAry.append("https://\(enteredDomain)")
-            self.tableView.reloadData()
-            UserDefaults.standard.set(self.whiteListAry, forKey: "whiteListAry")
+//            self.whiteListAry.append("https://\(enteredDomain)")
+//            self.tableView.reloadData()
+//            UserDefaults.standard.set(self.whiteListAry, forKey: "whiteListAry")
         }
     }
     
@@ -90,22 +100,24 @@ class WhiteListViewController: UIViewController {
         isEdit.toggle()
         tableView.reloadData()
         customView.isHidden = false
+        
     }
     
-    
-    //   @IBAction func deleteButtonTapped(_ sender: UIButton) {
-    //        whiteListAry.remove(elementsAtIndices: deleteIndex)
-    //        deleteIndex.removeAll()
-    //        print(deleteIndex)
-    //        tableView.reloadData()
-    //        let seconds = 0.2
-    //        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-    //            UIView.animate(withDuration: 0.3, animations: { () -> Void in
-    //                self.bottonViewHeight.constant = 0
-    //                self.deleteButtonHeight.constant = 0
-    //                self.view.layoutIfNeeded()
-    //            })
-    //  }
+//
+//    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+//        whiteListAry.remove(elementsAtIndices: deleteIndex)
+//        deleteIndex.removeAll()
+//        print(deleteIndex)
+//        tableView.reloadData()
+//        let seconds = 0.2
+//        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+//            UIView.animate(withDuration: 0.3, animations: { () -> Void in
+//                self.bottonViewHeight.constant = 0
+//                self.deleteButtonHeight.constant = 0
+//                self.view.layoutIfNeeded()
+//            })
+//        }
+//    }
     
     @objc func deleteButtonTapped(){
         print("ggggggggggg")

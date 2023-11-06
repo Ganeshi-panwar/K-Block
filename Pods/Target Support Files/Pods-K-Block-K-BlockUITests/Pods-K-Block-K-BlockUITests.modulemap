@@ -1,0 +1,6 @@
+framework module Pods_K_Block_K_BlockUITests {
+  umbrella header "Pods-K-Block-K-BlockUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

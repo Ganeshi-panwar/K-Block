@@ -41,12 +41,12 @@ class BlackListViewController: UIViewController {
     
     @objc func addButtonBlackListTapped(){
         
-        showAlertForAddingDomain { enterDomain in
-            print("Enter Domain\(enterDomain)")
-            self.blackListArr.append(enterDomain)
-            self.tableView.reloadData()
-        }
-    }
+//        showAlertForAddingDomain { enterDomain in
+//            print("Enter Domain\(enterDomain)")
+//            self.blackListArr.append(enterDomain)
+//            self.tableView.reloadData()
+//        }
+   }
     @objc func deleteButtonTapped(){
         
     }
