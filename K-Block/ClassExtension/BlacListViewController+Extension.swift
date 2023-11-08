@@ -15,7 +15,7 @@ extension BlackListViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let blackListCell = tableView.dequeueReusableCell(withIdentifier: "BlackListTableViewCell", for: indexPath) as! BlackListTableViewCell
 //        blackListCell.blackListDomain.text = blackListArr[indexPath.row]
-        blackListCell.delegete
+        blackListCell.delegete = self
         blackListCell.chechButton.isSelected = false
         blackListCell.chechButton.tag = indexPath.row
         blackListCell.blackConfigCell(blackListArr[indexPath.row], isEdit: isEdit)

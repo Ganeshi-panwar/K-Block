@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import NetworkExtension
 
 class HomeViewController: UIViewController {
     var color = UIColor()
+   // let vpnConnect = VPNConnect()
     
     
     @IBOutlet var showDataTraffic: UILabel!
@@ -35,6 +37,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(vpnStateChanged), name: .NEVPNStatusDidChange, object: nil)
+        
         setUIViewBorder()
         addDashBorderAndBounceAnimation(to: blockAdApplicationAndBrowser, withRadius: 20, andBorderWidth: 2)
         addDashBorderAndBounceAnimation(to: blockAdOnlyBrowserbut, withRadius: 20, andBorderWidth: 2)
@@ -84,12 +88,17 @@ class HomeViewController: UIViewController {
     
     @IBAction func offButnTappes(_ sender: UIButton) {
         ofButton()
+        adBlockDisable.text = "Ad blocking is inactive"
         
         
     }
     @IBAction func onBtunTapped(_ sender: UIButton) {
         onButton(sender: onButton)
         showAlertForVPNConfiguration()
+        adBlockDisable.text = "Ad blocking is active"
+        
+        
+        
         
     }
     @IBAction func blockAdOnlyBrowserButnTapped(_ sender: UIButton) {
@@ -103,6 +112,10 @@ class HomeViewController: UIViewController {
         blockAdApplicationAndBrowserBtn()
         
         
+    }
+    @objc func vpnStateChanged(){
+        let status = NEVPNManager.shared().connection.status
+        print("VPN Status : \(status)")
     }
     
 }

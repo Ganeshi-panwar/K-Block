@@ -33,7 +33,7 @@ class AuthenticationViewController: UIViewController {
     func homeViewController(){
         //        let homeVC = HomeViewController()
         //        self.present(homeVC, animated: true , completion: nil)
-        let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+        let homeVC = self.storyboard?.instantiateViewController(identifier: "TabBarViewController") as! TabBarViewController
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
     

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import NetworkExtension
 
 extension HomeViewController{
     func setUIViewBorder(){
@@ -149,7 +150,7 @@ extension HomeViewController{
             blockAdApplicationAndBrowser.layer.cornerRadius = 20
         }
  }
- 
+    
     }
  
 

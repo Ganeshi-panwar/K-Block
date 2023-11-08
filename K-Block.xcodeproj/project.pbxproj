@@ -13,6 +13,8 @@
 		AC1FCF342ABC1A14002176A5 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FCF332ABC1A14002176A5 /* AuthenticationViewController.swift */; };
 		AC2D63A42AC441DF00476646 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D63A32AC441DF00476646 /* HomeViewController.swift */; };
 		AC5A61AA2AC1ABB800844DFF /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A61A92AC1ABB800844DFF /* InstructionViewController.swift */; };
+		AC6125D82AFB4C3E00BA273C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6125D72AFB4C3E00BA273C /* TabBarViewController.swift */; };
+		AC6125DC2AFB60E000BA273C /* VPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6125DB2AFB60E000BA273C /* VPN.swift */; };
 		AC61555D2AF267AF00150293 /* AppManagementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61555C2AF267AF00150293 /* AppManagementTableViewCell.swift */; };
 		AC6650822AB9ABD500CC8661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6650812AB9ABD500CC8661 /* AppDelegate.swift */; };
 		AC6650842AB9ABD500CC8661 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6650832AB9ABD500CC8661 /* SceneDelegate.swift */; };
@@ -75,6 +77,9 @@
 		AC1FCF332ABC1A14002176A5 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		AC2D63A32AC441DF00476646 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC5A61A92AC1ABB800844DFF /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		AC6125D72AFB4C3E00BA273C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		AC6125DB2AFB60E000BA273C /* VPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPN.swift; sourceTree = "<group>"; };
+		AC6125DE2AFB624200BA273C /* StaticRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticRules.swift; sourceTree = "<group>"; };
 		AC61555C2AF267AF00150293 /* AppManagementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManagementTableViewCell.swift; sourceTree = "<group>"; };
 		AC66507E2AB9ABD500CC8661 /* K-Block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K-Block.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6650812AB9ABD500CC8661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +178,7 @@
 				AC1FCF312ABC1300002176A5 /* LogInViewController.swift */,
 				AC1FCF332ABC1A14002176A5 /* AuthenticationViewController.swift */,
 				AC5A61A92AC1ABB800844DFF /* InstructionViewController.swift */,
+				AC6125D72AFB4C3E00BA273C /* TabBarViewController.swift */,
 				AC2D63A32AC441DF00476646 /* HomeViewController.swift */,
 				AC71BD162ADEE67F007D6DA1 /* ListTableViewController.swift */,
 				ACFE611A2ADFB5790089DECB /* WhiteListViewController.swift */,
@@ -190,6 +196,30 @@
 				AC70CB402AC1E65100411C2C /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AC6125D92AFB606800BA273C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AC6125DA2AFB60AD00BA273C /* VPNUtils */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AC6125DA2AFB60AD00BA273C /* VPNUtils */ = {
+			isa = PBXGroup;
+			children = (
+				AC6125DB2AFB60E000BA273C /* VPN.swift */,
+			);
+			path = VPNUtils;
+			sourceTree = "<group>";
+		};
+		AC6125DD2AFB623800BA273C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AC6125DE2AFB624200BA273C /* StaticRules.swift */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		AC6650752AB9ABD500CC8661 = {
@@ -217,6 +247,8 @@
 		AC6650802AB9ABD500CC8661 /* K-Block */ = {
 			isa = PBXGroup;
 			children = (
+				AC6125DD2AFB623800BA273C /* Core */,
+				AC6125D92AFB606800BA273C /* Utils */,
 				AC682B8C2ADFBF3A00FC2665 /* CostomClasses */,
 				AC75D33E2ABC9E600088B845 /* Extension */,
 				AC7848B02AD5494300C61B1A /* Model */,
@@ -540,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6125D82AFB4C3E00BA273C /* TabBarViewController.swift in Sources */,
 				ACFE611B2ADFB5790089DECB /* WhiteListViewController.swift in Sources */,
 				AC682B8B2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift in Sources */,
 				AC6F32BE2AE927FB00DF471C /* BlackListViewController.swift in Sources */,
@@ -547,6 +580,7 @@
 				AC76299C2AEB8AF800D0648A /* BlackListTableViewCell.swift in Sources */,
 				AC1FCF322ABC1300002176A5 /* LogInViewController.swift in Sources */,
 				AC682B912ADFFAF200FC2665 /* UIButton+Extension.swift in Sources */,
+				AC6125DC2AFB60E000BA273C /* VPN.swift in Sources */,
 				AC76299E2AEB8B6000D0648A /* BlacListViewController+Extension.swift in Sources */,
 				AC7379192AF12D2F008226C2 /* HistoryNumberOfAdBlockViewController.swift in Sources */,
 				AC7848AF2AD52CB900C61B1A /* Color+Extension.swift in Sources */,
@@ -754,6 +788,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -783,6 +818,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

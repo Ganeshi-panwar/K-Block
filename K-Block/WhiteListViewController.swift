@@ -35,58 +35,25 @@ class WhiteListViewController: UIViewController {
         // show the store data
         if let storedArray = UserDefaults.standard.array(forKey: "whiteListAry") as? [String] {
             whiteListAry = storedArray
+            
         }
         
     }
     
     @objc func addButtonTapped() {
-        
-        //        let uiAlert = UIAlertController(title: "Add blocklist", message: "Enter the domain you want to block", preferredStyle: .alert)
-        //        uiAlert.addTextField{ (textfield:UITextField!)-> Void in
-        //            textfield.placeholder = "blacklist.com"
-        //        }
-        //        let cancel = UIAlertAction(title: "cancel", style: .cancel){ _ in
-        //        }
-        //        let save = UIAlertAction(title: "Add", style: .destructive){ action in
-        //            if let textField = uiAlert.textFields?.first,
-        //               let enteredDomain = textField.text, !enteredDomain.isEmpty {
-        //                // Add the entered domain to the array
-        //                self.whiteListAry.append("https://\(enteredDomain)")
-        //                // Reload the table view to reflect the changes
-        //                self.tableView.reloadData()
-        //                print(self.whiteListAry)
-        //                UserDefaults.standard.set(self.whiteListAry, forKey: "whiteListAry")
-        //            }
-        //
-        //        }
-        //
-        //        uiAlert.addAction(save)
-        //        uiAlert.addAction(cancel)
-        //        self.present(uiAlert , animated: true)
-        //    }
-        //
-        
-        
-        
+ 
         // Call the function
         showAlertForAddingDomain { enteredDomain in
             // Handle the entered domain
-            if let enteredDomain = enteredDomain{
-                if enteredDomain == nil{
-                    print("Enter Domin \(enteredDomain)")
-                    self.whiteListAry.append(enteredDomain)
-                    self.tableView.reloadData()
-                    UserDefaults.standard.set(self.whiteListAry, forKey: "whiteListAry")
-                }
-            }else {
+            if let enteredDomain = enteredDomain , !enteredDomain.isEmpty{
+                self.whiteListAry.append(enteredDomain)
+                self.tableView.reloadData()
+                UserDefaults.standard.set(self.whiteListAry, forKey: "whiteListAry")
+
+            }else{
+                
                 print("User canceled or entered an empty domain.")
             }
-//            print("Entered domain: \(enteredDomain)")
-
-            // Add the entered domain to the array, reload the table view, etc.
-//            self.whiteListAry.append("https://\(enteredDomain)")
-//            self.tableView.reloadData()
-//            UserDefaults.standard.set(self.whiteListAry, forKey: "whiteListAry")
         }
     }
     

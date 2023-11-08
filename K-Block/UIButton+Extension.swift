@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 extension WhiteListViewController{
     func addDataButton(){
-        addButton.frame = CGRect(x: view.frame.width - 60, y: view.frame.height - 105, width: 50, height: 50)
+        addButton.frame = CGRect(x: view.frame.width - 60, y: view.frame.height - 140, width: 50, height: 50)
         //addButton.setTitle("Add", for: .normal)
         addButton.setImage(UIImage(named: "addButton"), for: .normal)
         
@@ -21,7 +21,7 @@ extension WhiteListViewController{
 }
 extension BlackListViewController{
     func setBlackListButton(){
-        addBlackListButton.frame = CGRect(x: view.frame.width - 70, y: view.frame.height - 105, width: 50, height: 50)
+        addBlackListButton.frame = CGRect(x: view.frame.width - 60, y: view.frame.height - 140, width: 50, height: 50)
         addBlackListButton.setImage(UIImage(named: "addButton"), for: .normal)
         addBlackListButton.backgroundColor = UIColor.clear
         addBlackListButton.addTarget(self, action: #selector(addButtonBlackListTapped), for: .touchUpInside)

@@ -20,6 +20,7 @@ class BlackListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
       //  setBlackListCustomView()
         setBlackListButton()
      //   blackCustomView.isHidden = true
@@ -27,6 +28,9 @@ class BlackListViewController: UIViewController {
         customButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         //addBlackListButton.layer.masksToBounds = true
         // Do any additional setup after loading the view.
+        if  let domain = UserDefaults.standard.array(forKey: "BlockListDomain") as? [String] {
+              blackListArr = domain
+          }
     }
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
@@ -40,12 +44,19 @@ class BlackListViewController: UIViewController {
     }
     
     @objc func addButtonBlackListTapped(){
-        
-//        showAlertForAddingDomain { enterDomain in
-//            print("Enter Domain\(enterDomain)")
-//            self.blackListArr.append(enterDomain)
-//            self.tableView.reloadData()
-//        }
+        showAlertForAddingDomain{  enterDomain in
+            if let  enterDomain = enterDomain , !enterDomain.isEmpty{
+                self.blackListArr.append(enterDomain)
+                
+                self.tableView.reloadData()
+                UserDefaults.standard.set(self.blackListArr, forKey: "BlockListDomain")
+            }
+            else{
+                print("User canceled or entered an empty domain")
+            }
+            
+        }
+
    }
     @objc func deleteButtonTapped(){
         
