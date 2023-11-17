@@ -40,18 +40,7 @@
         @IBAction func switchBtnTapped(_ sender: UISwitch) {
             
         }
-        
-        
-        
-        func addCheck(sender:UIButton){
-            //        sender.isSelected = !sender.isSelected
-            //        if sender.isSelected{
-            //            checkButton.setImage(UIImage(named: "list_icon_check"), for: .normal)
-            //        }else{
-            //            checkButton.setImage(UIImage(named: "list_icon-uncheck"), for: .normal)
-            //        }
-            
-        }
+
         func configCell(_ domainName:String , isEdit:Bool){
             self.domainLabal.text = domainName
             self.checkButton.isHidden =  isEdit

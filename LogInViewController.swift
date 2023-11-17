@@ -30,9 +30,9 @@ class LogInViewController: UIViewController {
         }
     }
     @IBAction func privacyPolicyBtunTapped(_ sender: UIButton) {
-        if let url = URL(string: "https://www.safari.com"){
-            UIApplication.shared.openURL(url)
-        }
+//        if let url = URL(string: "https://www.safari.com"){
+//            UIApplication.shared.openURL(url)
+//        }
         
     }
     
@@ -52,8 +52,10 @@ class LogInViewController: UIViewController {
     
     @IBAction func startUsingBtnTapped(_ sender: UIButton) {
       
-        let instructionVC = storyboard?.instantiateViewController(withIdentifier: "InstructionViewController") as! InstructionViewController
-        self.navigationController?.pushViewController(instructionVC, animated: true)
+//        let instructionVC = storyboard?.instantiateViewController(withIdentifier: "InstructionViewController") as! InstructionViewController
+//        self.navigationController?.pushViewController(instructionVC, animated: true)
+        let homeVc = storyboard?.instantiateViewController(withIdentifier: "AuthenticationViewController") as! AuthenticationViewController
+        self.navigationController?.pushViewController(homeVc, animated: true)
 
     }
     

@@ -6,8 +6,12 @@
 //
 
 import UIKit
+protocol blackListCellDelegate:NSObject{
+    func checkButton(_ checkButton:UIButton)
+}
 
 class BlackListTableViewCell: UITableViewCell {
+    weak var delegete:blackListCellDelegate?
     @IBOutlet var chechButton: UIButton!
     
     @IBOutlet var blackListSwitch: UISwitch!
@@ -15,7 +19,9 @@ class BlackListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        chechButton.backgroundColor = UIColor.clear
+        chechButton.setImage(UIImage(named: "list_icon_check"), for: .selected)
+        chechButton.setImage(UIImage(named: "list_icon-uncheck"), for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,7 +31,14 @@ class BlackListTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkBlackListButtonTapped(_ sender: UIButton) {
+        delegete?.checkButton(sender)
+        chechButton.isSelected.toggle()
     }
-    
+    func blackConfigCell(_ domainName:String , isEdit:Bool){
+        self.blackListDomain.text = domainName
+        self.chechButton.isHidden = isEdit
+        
+        
+    }
 
 }

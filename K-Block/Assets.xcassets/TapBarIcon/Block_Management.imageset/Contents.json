@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "footer_list_on.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "footer_list_on.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
