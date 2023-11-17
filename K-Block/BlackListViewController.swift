@@ -21,9 +21,12 @@ class BlackListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      //  setBlackListCustomView()
-        setBlackListButton()
-     //   blackCustomView.isHidden = true
+        //setBlackListCustomView()
+    
+        setBlackListAddButton()
+        setCustomView()
+        
+    
         addBlackListButton.layer.cornerRadius = 10
         customButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         //addBlackListButton.layer.masksToBounds = true
@@ -40,6 +43,8 @@ class BlackListViewController: UIViewController {
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         isEdit.toggle()
         tableView.reloadData()
+        setCustomView()
+   
       //  blackCustomView.isHidden = false
     }
     

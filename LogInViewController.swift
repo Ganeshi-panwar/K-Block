@@ -30,9 +30,9 @@ class LogInViewController: UIViewController {
         }
     }
     @IBAction func privacyPolicyBtunTapped(_ sender: UIButton) {
-        if let url = URL(string: "https://www.safari.com"){
-            UIApplication.shared.openURL(url)
-        }
+//        if let url = URL(string: "https://www.safari.com"){
+//            UIApplication.shared.openURL(url)
+//        }
         
     }
     

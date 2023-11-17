@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 import NetworkExtension
+
 extension UIViewController{
+    
     
     func openAlert(title:String , message:String , cancel:String , destructive:String ){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -44,11 +46,11 @@ extension UIViewController{
                 // Open app settings when Allow is clicked
                 if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
-                //self.connectToVPN()
+                    //self.connectToVPN()
                 }
-                //self.connectToVPN()
-                self.requestVPNPermission()
-                // Set the flag to indicate that the alert has been shown
+                // Connect to VPN when the user allows
+                              
+              
                 UserDefaults.standard.set(true, forKey: "isVPNConfiguration")
             }
             
@@ -61,46 +63,47 @@ extension UIViewController{
     }
     
     
-    func requestVPNPermission() {
-        NEVPNManager.shared().loadFromPreferences { (error) in
-                if let error = error {
-                    print("Error loading VPN preferences: \(error.localizedDescription)")
-                    // Handle the error appropriately
-                } else {
-                    // Trigger the system prompt for VPN configuration permission
-                    NEVPNManager.shared().saveToPreferences { (error) in
-                        if let error = error {
-                            print("Error saving VPN preferences: \(error.localizedDescription)")
-                            // Handle the error appropriately
-                        } else {
-                            // Connect to the VPN automatically
-                            connectToVPN()
-                      
-                        // Set the flag to indicate that the alert has been shown
-                        UserDefaults.standard.set(true, forKey: "isVPNConfiguration")
-                    }
-                }
-            }
-        }
+//
+//    func requestVPNPermission() {
+//        NEVPNManager.shared().loadFromPreferences { (error) in
+//                if let error = error {
+//                    print("Error loading VPN preferences: \(error.localizedDescription)")
+//                    // Handle the error appropriately
+//                } else {
+//                    // Trigger the system prompt for VPN configuration permission
+//                    NEVPNManager.shared().saveToPreferences { (error) in
+//                        if let error = error {
+//                            print("Error saving VPN preferences: \(error.localizedDescription)")
+//                            // Handle the error appropriately
+//                        } else {
+//                            // Connect to the VPN automatically
+//                            connectToVPN()
+//
+//                        // Set the flag to indicate that the alert has been shown
+//                        UserDefaults.standard.set(true, forKey: "isVPNConfiguration")
+//                    }
+//                }
+//            }
+//        }
+//
+//        func connectToVPN(){
+//            let vpnManager = NEVPNManager.shared()
+//
+//
+//            do{
+//                try vpnManager.connection.startVPNTunnel()
+//                print("vpn connected")
+//            }
+//            catch let error{
+//                print("Error starting VPN tunnel: \(error.localizedDescription)")
+//            }
+//        }
+//
+//        func disconnectVPN(){
+//            NEVPNManager.shared().connection.stopVPNTunnel()
+//        }
         
-        func connectToVPN(){
-            let vpnManager = NEVPNManager.shared()
-            
-            
-            do{
-                try vpnManager.connection.startVPNTunnel()
-                print("vpn connected")
-            }
-            catch let error{
-                print("Error starting VPN tunnel: \(error.localizedDescription)")
-            }
-        }
-        
-        func disconnectVPN(){
-            NEVPNManager.shared().connection.stopVPNTunnel()
-        }
-        
-    }
+    
     func showCustomTooltip() {
         let alertController = UIAlertController(title: "Add Something", message: "Enter your text:", preferredStyle: .actionSheet) // Using .actionSheet for tooltip-like behavior
         
@@ -176,3 +179,4 @@ extension UIViewController{
     }
     
 }
+

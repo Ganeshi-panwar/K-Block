@@ -37,6 +37,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         NotificationCenter.default.addObserver(self, selector: #selector(vpnStateChanged), name: .NEVPNStatusDidChange, object: nil)
         
         setUIViewBorder()
@@ -45,7 +46,7 @@ class HomeViewController: UIViewController {
         
         
     }
-    
+  
     @IBAction func Hours24Tapped(_ sender: UIButton) {
         
         for button in switching{

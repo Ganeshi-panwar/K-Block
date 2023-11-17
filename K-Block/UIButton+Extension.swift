@@ -20,7 +20,7 @@ extension WhiteListViewController{
     }
 }
 extension BlackListViewController{
-    func setBlackListButton(){
+    func setBlackListAddButton(){
         addBlackListButton.frame = CGRect(x: view.frame.width - 60, y: view.frame.height - 140, width: 50, height: 50)
         addBlackListButton.setImage(UIImage(named: "addButton"), for: .normal)
         addBlackListButton.backgroundColor = UIColor.clear

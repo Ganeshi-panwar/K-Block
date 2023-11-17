@@ -62,6 +62,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="privacyPolicyBtunTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B46-9f-b5T"/>
+                                    <segue destination="K0B-MY-i7o" kind="show" id="5Kx-2g-7DT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPA-Jt-8mx">
@@ -202,13 +203,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to set up ad blocking in Safari" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OS-9z-pzP">
-                                <rect key="frame" x="65" y="99" width="263.33333333333331" height="20.333333333333329"/>
+                                <rect key="frame" x="65" y="143" width="263.33333333333331" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.27390995620000003" green="0.27074429389999999" blue="0.2707176208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBs-Jf-T3L">
-                                <rect key="frame" x="166.66666666666666" y="139.33333333333334" width="60" height="2"/>
+                                <rect key="frame" x="166.66666666666666" y="183.33333333333334" width="60" height="2"/>
                                 <color key="backgroundColor" red="0.3210158944" green="0.69720906019999995" blue="0.23792281749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="o3d-Bo-IzQ"/>
@@ -216,7 +217,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-0z-c45">
-                                <rect key="frame" x="57" y="175.33333333333334" width="279" height="80"/>
+                                <rect key="frame" x="57" y="219.33333333333337" width="279" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Please]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ue-vv-7v1">
                                         <rect key="frame" x="108.33333333333333" y="5" width="62.333333333333329" height="20.333333333333332"/>
@@ -242,7 +243,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PKh-Ia-pcX">
-                                <rect key="frame" x="52" y="286.33333333333331" width="289" height="122"/>
+                                <rect key="frame" x="52" y="330.33333333333331" width="289" height="122"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Open the &quot;Settings&quot; app on      your iPhone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UD-05-Zyy">
                                         <rect key="frame" x="0.0" y="0.0" width="289" height="40.666666666666664"/>
@@ -277,7 +278,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNs-CQ-L9g">
-                                <rect key="frame" x="20" y="448.33333333333331" width="353" height="35"/>
+                                <rect key="frame" x="20" y="492.33333333333331" width="353" height="34.999999999999943"/>
                                 <color key="backgroundColor" red="0.326683104" green="0.70845645670000001" blue="0.24030864239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Wj7-Gj-V13"/>
@@ -309,6 +310,7 @@
                             <constraint firstItem="i2d-y3-v9l" firstAttribute="trailing" secondItem="7Tn-0z-c45" secondAttribute="trailing" constant="57" id="xGf-D4-ndg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9Pb-qH-O0U"/>
                     <connections>
                         <outlet property="setBtn" destination="iNs-CQ-L9g" id="1dn-Qy-ohd"/>
                         <outlet property="setFivelab" destination="KwU-Mo-uvg" id="7uM-ew-CH9"/>
@@ -326,6 +328,7 @@
         <scene sceneID="tyM-le-ebo">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarViewController" id="Wvl-93-FvX" customClass="TabBarViewController" customModule="K_Block" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Zyh-ZG-eUY"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ly9-Tp-wQj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -636,7 +639,7 @@
                                                         <rect key="frame" x="165" y="0.0" width="155" height="179"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HUf-MH-2xr">
-                                                                <rect key="frame" x="34.666666666666657" y="71.666666666666629" width="86" height="36"/>
+                                                                <rect key="frame" x="34.666666666666686" y="71.666666666666629" width="86" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60MB" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9t-px-6M1">
                                                                         <rect key="frame" x="0.0" y="0.0" width="86" height="36"/>
@@ -696,7 +699,7 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-BL-WiH">
-                                                                                        <rect key="frame" x="66" y="0.0" width="56" height="50"/>
+                                                                                        <rect key="frame" x="65.999999999999986" y="0.0" width="56" height="50"/>
                                                                                         <color key="backgroundColor" red="0.6580377221" green="0.6326493621" blue="0.63243144750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <color key="tintColor" red="0.28567454219999999" green="0.28250890969999998" blue="0.28248226640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <state key="normal" title="Button"/>

@@ -52,3 +52,48 @@ extension WhiteListViewController{
         ])
     }
 }
+extension BlackListViewController{
+    func setCustomView(){
+        let bottomViewSpacing:CGFloat = 1
+        blackCustomView.backgroundColor = UIColor.lightGray
+        view.addSubview(blackCustomView)
+        blackCustomView.translatesAutoresizingMaskIntoConstraints = false
+        // add button
+        let deleteButton = UIButton(type: .system)
+        deleteButton.setTitle("Delete", for: .normal)
+        deleteButton.backgroundColor = UIColor.white
+        deleteButton.setTitleColor(UIColor.darkGray, for: .normal)
+        deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+        deleteButton.translatesAutoresizingMaskIntoConstraints = false
+        blackCustomView.addSubview(deleteButton)
+        // Set button height, width, and corner radius
+        let  deletebuttonHeight: CGFloat = 40
+        let  deletebuttonWidth: CGFloat = 80
+        // let  deletecornerRadius: CGFloat = 10
+        
+        NSLayoutConstraint.activate([
+            blackCustomView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            blackCustomView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            blackCustomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant:-bottomViewSpacing),
+            blackCustomView.heightAnchor.constraint(equalToConstant: 60),
+            //  constraint for button  within custom view
+            deleteButton.leadingAnchor.constraint(equalTo: blackCustomView.leadingAnchor , constant: 20),
+            deleteButton.topAnchor.constraint(equalTo: blackCustomView.topAnchor , constant: 10),
+            deleteButton.widthAnchor.constraint(equalToConstant: deletebuttonWidth),
+            deleteButton.heightAnchor.constraint(equalToConstant: deletebuttonHeight)
+        ])
+        
+    }
+    func setUpDeleteButton(){
+        addBlackListButton.setTitle("Delete", for: .normal)
+        addBlackListButton.setTitleColor(UIColor.darkGray, for: .normal)
+        //  customView.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+        blackCustomView.addSubview(addBlackListButton)
+        blackCustomView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            addBlackListButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            addBlackListButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20)
+        ])
+    }
+}
+
