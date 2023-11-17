@@ -25,6 +25,7 @@ class BlackListViewController: UIViewController {
     
         setBlackListAddButton()
         setCustomView()
+        blackCustomView.isHidden = false
         
     
         addBlackListButton.layer.cornerRadius = 10
@@ -45,7 +46,7 @@ class BlackListViewController: UIViewController {
         tableView.reloadData()
         setCustomView()
    
-      //  blackCustomView.isHidden = false
+      blackCustomView.isHidden = false
     }
     
     @objc func addButtonBlackListTapped(){
@@ -64,6 +65,13 @@ class BlackListViewController: UIViewController {
 
    }
     @objc func deleteButtonTapped(){
+        blackListArr.remove(elementsAtIndices: deleteIndex)
+        deleteIndex.removeAll()
+        print(deleteIndex)
+        tableView.reloadData()
+        
+        
+        blackCustomView.isHidden = true
         
     }
 }
