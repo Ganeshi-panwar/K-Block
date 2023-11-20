@@ -21,7 +21,7 @@
         override func awakeFromNib() {
             super.awakeFromNib()
           //  domainLabal.text = strDomain
-            checkButton.isHidden  = true
+            //checkButton.isHidden  = true
             checkButton.setImage(UIImage(named: "list_icon_check"), for: .selected)
             checkButton.setImage(UIImage(named: "list_icon-uncheck"), for: .normal)
         }

@@ -31,6 +31,7 @@ class BlackListTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkBlackListButtonTapped(_ sender: UIButton) {
+        
         delegete?.checkButton(sender)
         chechButton.isSelected.toggle()
     }

@@ -8,8 +8,12 @@
 import UIKit
 
 class AppManagementViewController: UIViewController {
+    var installedApp: [(name:String , icon:UIImage?, domain:String)] = []
     
 
+    @IBOutlet var dataUseLbl: UILabel!
+    @IBOutlet var domainName: UILabel!
+    @IBOutlet var appIcon: UIImageView!
     @IBOutlet var onOffView: UIView!
     @IBOutlet var onOffButton: [UIButton]!
     @IBOutlet var onButton: UIButton!
@@ -18,6 +22,7 @@ class AppManagementViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchInstallApp()
         onButton.isHidden = true
         offButton.isHidden = true
         onOffView.isHidden = true

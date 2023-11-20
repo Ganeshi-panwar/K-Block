@@ -14,27 +14,24 @@ class BlackListViewController: UIViewController {
     var blackCustomView = UIView()
     var customButton = UIButton()
     var deleteIndex = [Int]()
-   // var blackListArr = ["1","2","3","4"]
-   
+    
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        //setBlackListCustomView()
-    
+        
         setBlackListAddButton()
         setCustomView()
-        blackCustomView.isHidden = false
+        blackCustomView.isHidden = true
         
-    
+        
         addBlackListButton.layer.cornerRadius = 10
         customButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         //addBlackListButton.layer.masksToBounds = true
         // Do any additional setup after loading the view.
         if  let domain = UserDefaults.standard.array(forKey: "BlockListDomain") as? [String] {
-              blackListArr = domain
-          }
+            blackListArr = domain
+        }
     }
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
@@ -44,16 +41,13 @@ class BlackListViewController: UIViewController {
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         isEdit.toggle()
         tableView.reloadData()
-        setCustomView()
-   
-      blackCustomView.isHidden = false
+        blackCustomView.isHidden = false
     }
     
     @objc func addButtonBlackListTapped(){
         showAlertForAddingDomain{  enterDomain in
             if let  enterDomain = enterDomain , !enterDomain.isEmpty{
                 self.blackListArr.append(enterDomain)
-                
                 self.tableView.reloadData()
                 UserDefaults.standard.set(self.blackListArr, forKey: "BlockListDomain")
             }
@@ -62,15 +56,13 @@ class BlackListViewController: UIViewController {
             }
             
         }
-
-   }
+        
+    }
     @objc func deleteButtonTapped(){
         blackListArr.remove(elementsAtIndices: deleteIndex)
         deleteIndex.removeAll()
         print(deleteIndex)
         tableView.reloadData()
-        
-        
         blackCustomView.isHidden = true
         
     }
