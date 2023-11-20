@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="neJ-Op-jDD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1269,7 +1270,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlV-6J-Ipu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685.5999999999999" y="1829.5566502463055"/>
+            <point key="canvasLocation" x="2663" y="1778"/>
         </scene>
         <!--History-->
         <scene sceneID="ko2-kq-apq">
@@ -1345,9 +1346,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dataTrafficLbl" destination="31I-Hf-BD5" id="auV-Tx-DrE"/>
-                                            <outlet property="domainName" destination="CDA-Gi-8km" id="5OF-ng-cr3"/>
-                                            <outlet property="iconImage" destination="oJs-9X-LDh" id="koo-YU-rRt"/>
+                                            <outlet property="dataTrafficLbl" destination="31I-Hf-BD5" id="3NG-U5-m4F"/>
+                                            <outlet property="domainName" destination="CDA-Gi-8km" id="558-BE-wPu"/>
+                                            <outlet property="iconImage" destination="oJs-9X-LDh" id="9jf-WZ-qjo"/>
                                             <outlet property="switch" destination="aDA-8J-Wf4" id="gSe-9i-M8V"/>
                                             <segue destination="hBy-MY-Jka" kind="show" id="ryG-gb-hX3"/>
                                         </connections>
@@ -1439,10 +1440,10 @@
             </objects>
             <point key="canvasLocation" x="3565.6488549618321" y="2657.7464788732395"/>
         </scene>
-        <!--Table View Controller-->
+        <!--App Management Screen Advanced Setting Table View Controller-->
         <scene sceneID="PxU-gd-KHe">
             <objects>
-                <tableViewController id="hBy-MY-Jka" sceneMemberID="viewController">
+                <tableViewController id="hBy-MY-Jka" customClass="AppManagementScreenAdvancedSettingTableViewController" customModule="K_Block" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xYV-GU-7D9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1586,11 +1587,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="40" id="sGU-EQ-yk9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="40" id="sGU-EQ-yk9">
                                         <rect key="frame" x="0.0" y="288" width="393" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sGU-EQ-yk9" id="Q0h-5e-MEt">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currect setting 3,00GB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEB-TF-akq">
@@ -1599,9 +1600,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahG-KS-ufL">
-                                                    <rect key="frame" x="324" y="4.6666666666666679" width="51" height="31.000000000000004"/>
-                                                </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upper limit for data communication amount " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc9-1V-sus">
                                                     <rect key="frame" x="10" y="2" width="318.33333333333331" height="19.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1611,10 +1609,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="jEB-TF-akq" firstAttribute="leading" secondItem="Q0h-5e-MEt" secondAttribute="leading" constant="10" id="5BX-pw-wOb"/>
-                                                <constraint firstAttribute="trailing" secondItem="ahG-KS-ufL" secondAttribute="trailing" constant="20" id="EtH-Zc-Vnq"/>
                                                 <constraint firstItem="jEB-TF-akq" firstAttribute="top" secondItem="Cc9-1V-sus" secondAttribute="bottom" constant="1" id="FbA-wJ-Ecu"/>
                                                 <constraint firstItem="Cc9-1V-sus" firstAttribute="top" secondItem="Q0h-5e-MEt" secondAttribute="top" constant="2" id="Rwi-o5-m3H"/>
-                                                <constraint firstItem="ahG-KS-ufL" firstAttribute="centerY" secondItem="Q0h-5e-MEt" secondAttribute="centerY" id="XP7-2i-APJ"/>
                                                 <constraint firstItem="Cc9-1V-sus" firstAttribute="leading" secondItem="Q0h-5e-MEt" secondAttribute="leading" constant="10" id="gBP-vG-Ifi"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1669,6 +1665,29 @@
             </objects>
             <point key="canvasLocation" x="4287.7862595419847" y="2657.7464788732395"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Bm3-Ql-Pk0">
+            <objects>
+                <viewController id="jUF-yg-UDA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CyB-vY-Smf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6T-Tg-6ai">
+                                <rect key="frame" x="76" y="362" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zEZ-ns-wkp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M6t-UG-oG9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMC-aA-YSH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4981" y="2658"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Block_Management" width="29.333333969116211" height="29.333333969116211"/>
@@ -1686,6 +1705,9 @@
         <image name="unchecked_icon" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

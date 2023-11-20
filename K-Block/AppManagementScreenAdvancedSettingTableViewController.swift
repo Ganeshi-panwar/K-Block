@@ -20,15 +20,29 @@ class AppManagementScreenAdvancedSettingTableViewController: UITableViewControll
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1{
+            let alert = UIAlertController(title: "Setting data traffic limit", message: "GB", preferredStyle: .alert)
+            alert.addTextField { textField in
+                textField.placeholder = "2GB"
+                
+            }
+            let ok = UIAlertAction(title: "OK", style: .destructive)
+            let cancel = UIAlertAction(title: "Cancel", style: .default)
+            alert.addAction(cancel)
+            alert.addAction(ok)
+            present(alert , animated: true)
+        }
     }
 
     /*
@@ -85,5 +99,10 @@ class AppManagementScreenAdvancedSettingTableViewController: UITableViewControll
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+
+    
 
 }

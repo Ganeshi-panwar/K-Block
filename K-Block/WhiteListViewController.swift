@@ -25,8 +25,8 @@ class WhiteListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCustomView()
-        customView.isHidden = true
+//        setCustomView()
+//        customView.isHidden = true
         deleteButton.layer.cornerRadius = 10
         deleteButton.layer.masksToBounds = true
         deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
@@ -66,25 +66,9 @@ class WhiteListViewController: UIViewController {
     @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
         isEdit.toggle()
         tableView.reloadData()
-        customView.isHidden = false
+//        customView.isHidden = false
         
     }
-    
-//
-//    @IBAction func deleteButtonTapped(_ sender: UIButton) {
-//        whiteListAry.remove(elementsAtIndices: deleteIndex)
-//        deleteIndex.removeAll()
-//        print(deleteIndex)
-//        tableView.reloadData()
-//        let seconds = 0.2
-//        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-//            UIView.animate(withDuration: 0.3, animations: { () -> Void in
-//                self.bottonViewHeight.constant = 0
-//                self.deleteButtonHeight.constant = 0
-//                self.view.layoutIfNeeded()
-//            })
-//        }
-//    }
     
     @objc func deleteButtonTapped(){
         print("ggggggggggg")
@@ -92,12 +76,7 @@ class WhiteListViewController: UIViewController {
         deleteIndex.removeAll()
         print(deleteIndex)
         tableView.reloadData()
-        //            let seconds = 0.2
-        //            DispatchQueue.main.asyncAfter(deadline: .now(), execute: + seconds){
-        //
-        //            }
-        print("hvhcjgsduygfueihfiuyiuwhkj")
-        
+        self.customView.isHidden = true
     }
     
     
