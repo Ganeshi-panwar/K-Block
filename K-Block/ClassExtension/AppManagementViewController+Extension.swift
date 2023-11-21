@@ -75,10 +75,12 @@ extension AppManagementViewController{
 
         if let appIconData = icon.perform(NSSelectorFromString("getPNGData"))?.takeUnretainedValue() as? Data {
             return UIImage(data: appIconData)
+            print("hello ganeshi")
         }
 
         return nil
     }
+    
 
 
 
