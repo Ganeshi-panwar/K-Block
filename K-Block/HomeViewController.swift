@@ -5,13 +5,19 @@
 //  Created by Mohit Mali on 27/09/23.
 //
 
+import os.log
 import UIKit
 import NetworkExtension
-
+//let logger = Logger()
 class HomeViewController: UIViewController {
-    var color = UIColor()
-   // let vpnConnect = VPNConnect()
     
+    var selectedServer: Resolver!
+    // var isOn:Bool!
+    
+    
+    
+    
+    var color = UIColor()
     
     @IBOutlet var showDataTraffic: UILabel!
     @IBOutlet var showNumberOfAdBlock: UILabel!
@@ -35,10 +41,9 @@ class HomeViewController: UIViewController {
     @IBOutlet var switching: [UIButton]!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        NotificationCenter.default.addObserver(self, selector: #selector(vpnStateChanged), name: .NEVPNStatusDidChange, object: nil)
         
         setUIViewBorder()
         addDashBorderAndBounceAnimation(to: blockAdApplicationAndBrowser, withRadius: 20, andBorderWidth: 2)
@@ -46,7 +51,34 @@ class HomeViewController: UIViewController {
         
         
     }
-  
+    func updateRule(for resolverID: UUID) {
+        guard let selectedResolver = Presets.servers.find(by: resolverID) else {
+            print("No resolver found with ID: \(resolverID)")
+            return
+        }
+        
+        print("Updating rules for resolver: \(selectedResolver.name)")
+        
+        // Access the rules for the selected resolver
+        let resolverRules = selectedResolver.onDemandRules
+        
+        // Do something with the rules, for example, print their names
+        for rule in resolverRules {
+            print("Rule Name: \(rule.name)")
+        }
+        
+        // Check if the selected resolver is marked as on, and perform actions accordingly
+        if selectedResolver.isOn {
+            // Perform actions to turn on the selected server
+            print("Turning on the selected server: \(selectedResolver.name)")
+            // ...
+        }
+    }
+    
+    
+    
+    
+    
     @IBAction func Hours24Tapped(_ sender: UIButton) {
         
         for button in switching{
@@ -84,24 +116,6 @@ class HomeViewController: UIViewController {
         showNumberOfAdBlock.text = "200"
         showDataTraffic.text = "50MB"
     }
-    
-    
-    
-    @IBAction func offButnTappes(_ sender: UIButton) {
-        ofButton()
-        adBlockDisable.text = "Ad blocking is inactive"
-        
-        
-    }
-    @IBAction func onBtunTapped(_ sender: UIButton) {
-        onButton(sender: onButton)
-        showAlertForVPNConfiguration()
-        adBlockDisable.text = "Ad blocking is active"
-        
-        
-        
-        
-    }
     @IBAction func blockAdOnlyBrowserButnTapped(_ sender: UIButton) {
         addAnimation()
         blockAdOnlyBrowserButn()
@@ -114,9 +128,118 @@ class HomeViewController: UIViewController {
         
         
     }
-    @objc func vpnStateChanged(){
-        let status = NEVPNManager.shared().connection.status
-        print("VPN Status : \(status)")
+    
+    
+    @IBAction func offButnTappes(_ sender: UIButton) {
+        ofButton()
+        adBlockDisable.text = "Ad blocking is inactive"
+        
+        
     }
     
+    
+    @IBAction func onBtunTapped(_ sender: UIButton) {
+        
+        onButton(sender: onButton)
+        // showAlertForVPNConfiguration()
+        adBlockDisable.text = "Ad blocking is active"
+        
+        
+        
+        let serverSelectionAlert = UIAlertController(title: "Select a DNS Server", message: nil, preferredStyle: .actionSheet)
+        
+        // Assuming `Presets.servers` is your array of available servers
+        for server in Presets.servers {
+            let action = UIAlertAction(title: server.name, style: .default) { _ in
+                self.selectedServer = server
+                self.updateRule(for: server.id)
+                
+                // Turn on the selected server
+                //self.turnOnSelectedServer()
+                self.connectToAdGuardServer()
+            }
+            serverSelectionAlert.addAction(action)
+        }
+        
+        // Add a cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        serverSelectionAlert.addAction(cancelAction)
+        
+        // Present the server selection alert
+        present(serverSelectionAlert, animated: true, completion: nil)
+    }
+    
+    //       func turnOnSelectedServer() {
+    //           guard let selectedServer = selectedServer else {
+    //               print("No server selected")
+    //               return
+    //           }
+    //
+    //           // Perform actions to turn on the selected server
+    //           print("Turning on the selected server: \(selectedServer.name)")
+    //
+    //           // You can add more logic here to handle the server activation
+    //
+    //           // Example: Update the UI or perform any other action
+    //           // ...
+    //
+    //           // Connect to the selected server
+    //           connectToSelectedServer()
+    //       }
+    //
+    //       func connectToSelectedServer() {
+    //           guard var selectedServer = selectedServer else {
+    //               print("No server selected")
+    //               return
+    //           }
+    //
+    //           // Add your logic to connect to the selected server based on its configuration
+    //           // ...
+    //
+    //           // Example: Update the configuration
+    //           if case .dnsOverHTTPS(var dohConfiguration) = selectedServer.configuration {
+    //             //  dohConfiguration.serverURL = URL(string: "https://dns.adguard.com/dns-query")
+    //               selectedServer.configuration = .dnsOverHTTPS(dohConfiguration)
+    //               print("Updated Configuration: \(selectedServer.name)")
+    //
+    //               // Perform additional actions after connecting to the server
+    //               // ...
+    //           } else {
+    //               print("Selected server does not have DNS-over-HTTPS configuration")
+    //           }
+    //       }
+    //
+    //}
+    func connectToAdGuardServer() {
+        // Create a resolver with AdGuard DNS configuration
+        let adGuardResolver = Resolver(
+            name: "AdGuard DNS",
+            configuration: .dnsOverHTTPS(
+                DoHConfiguration(
+                    servers: ["https://dns.adguard.com/dns-query"]
+                )
+            )
+        )
+        
+        // Update the UI or perform any other action
+        // ...
+        
+        // Connect to AdGuard DNS server
+        connectToSelectedServer(for: adGuardResolver)
+    }
+    
+    func connectToSelectedServer(for resolver: Resolver) {
+        guard resolver.configuration != nil else {
+            print("No server configuration found")
+            return
+        }
+        
+        // Perform actions to connect to the selected server based on its configuration
+        // ...
+        
+        // Example: Update the UI or perform any other action
+        // ...
+        
+        print("Connected to the selected server: \(resolver.name)")
+    }
 }

@@ -22,7 +22,7 @@ class AppManagementViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchInstallApp()
+       // fetchInstallApp()
         onButton.isHidden = true
         offButton.isHidden = true
         onOffView.isHidden = true
@@ -56,6 +56,7 @@ class AppManagementViewController: UIViewController {
     }
     
     @IBAction func onButtonTapped(_ sender: UIButton) {
+        print("jhbjhuh")
     }
     
     @IBAction func offButtonTapped(_ sender: UIButton) {
