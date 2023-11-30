@@ -27,10 +27,8 @@ class HistoryNumberOfAdBlockViewController: UIViewController,ChartViewDelegate {
                                           y: Double(x)))
             
         }
-        
-        
         let set = LineChartDataSet(entries: entries )
-        set.colors = ChartColorTemplates.material()
+        set.colors = ChartColorTemplates.colorful()
         let data = LineChartData(dataSet: set)
         lineChart.data = data
     }

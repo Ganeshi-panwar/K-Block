@@ -9,4 +9,5 @@ import Foundation
 struct AuthenticatUser:Decodable {
     var id: String
     var message: String
+   // var Code:String
 }

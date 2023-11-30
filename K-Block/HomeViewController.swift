@@ -133,6 +133,7 @@ class HomeViewController: UIViewController {
     @IBAction func offButnTappes(_ sender: UIButton) {
         ofButton()
         adBlockDisable.text = "Ad blocking is inactive"
+        VPNConnectionManager(vpnManager: .shared())
         
         
     }

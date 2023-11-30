@@ -9,7 +9,9 @@ import UIKit
 
 class AppManagementViewController: UIViewController {
     var installedApp: [(name:String , icon:UIImage?, domain:String)] = []
-    
+   
+
+   
 
     @IBOutlet var dataUseLbl: UILabel!
     @IBOutlet var domainName: UILabel!
@@ -57,6 +59,16 @@ class AppManagementViewController: UIViewController {
     
     @IBAction func onButtonTapped(_ sender: UIButton) {
         print("jhbjhuh")
+        do {
+            if let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                print("Documents Path: \(documentsPath)")
+            } else {
+                print("Unable to retrieve documents path.")
+            }
+
+        } catch {
+            print("Error reading directory: \(error)")
+        }
     }
     
     @IBAction func offButtonTapped(_ sender: UIButton) {

@@ -58,6 +58,10 @@
 		AC8159DC2B0FB18100A47257 /* LazyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D52B0FB18000A47257 /* LazyTextField.swift */; };
 		AC8159DD2B0FB18100A47257 /* HowToActivateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D62B0FB18000A47257 /* HowToActivateView.swift */; };
 		AC8159DE2B0FB18100A47257 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D72B0FB18000A47257 /* ContentView.swift */; };
+		AC84441E2B15C60E0084F705 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84441D2B15C60E0084F705 /* AccountViewController.swift */; };
+		AC8444202B15C63E0084F705 /* DesignSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84441F2B15C63E0084F705 /* DesignSettingViewController.swift */; };
+		AC8444222B15C6BE0084F705 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8444212B15C6BE0084F705 /* AboutAppViewController.swift */; };
+		ACB500232B1847370029C32F /* OtherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB500222B1847370029C32F /* OtherTableViewController.swift */; };
 		ACE313E62AF3A3E1005B792E /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE313E52AF3A3E1005B792E /* Dictionary+Extension.swift */; };
 		ACE9C9482AEA91C400A33316 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9C9472AEA91C400A33316 /* Array+Extension.swift */; };
 		ACEB603F2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB603E2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift */; };
@@ -144,6 +148,10 @@
 		AC8159D52B0FB18000A47257 /* LazyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTextField.swift; sourceTree = "<group>"; };
 		AC8159D62B0FB18000A47257 /* HowToActivateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToActivateView.swift; sourceTree = "<group>"; };
 		AC8159D72B0FB18000A47257 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC84441D2B15C60E0084F705 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AC84441F2B15C63E0084F705 /* DesignSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSettingViewController.swift; sourceTree = "<group>"; };
+		AC8444212B15C6BE0084F705 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		ACB500222B1847370029C32F /* OtherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTableViewController.swift; sourceTree = "<group>"; };
 		ACE313E52AF3A3E1005B792E /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		ACE9C9472AEA91C400A33316 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		ACEB603E2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManagementScreenAdvancedSettingTableViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +228,10 @@
 				AC7379142AF10056008226C2 /* AppManagementViewController.swift */,
 				AC7379182AF12D2F008226C2 /* HistoryNumberOfAdBlockViewController.swift */,
 				ACEB603E2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift */,
+				ACB500222B1847370029C32F /* OtherTableViewController.swift */,
+				AC84441D2B15C60E0084F705 /* AccountViewController.swift */,
+				AC84441F2B15C63E0084F705 /* DesignSettingViewController.swift */,
+				AC8444212B15C6BE0084F705 /* AboutAppViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -653,6 +665,7 @@
 				AC682B912ADFFAF200FC2665 /* UIButton+Extension.swift in Sources */,
 				AC6125DC2AFB60E000BA273C /* VPNConfigurationManager.swift in Sources */,
 				AC76299E2AEB8B6000D0648A /* BlacListViewController+Extension.swift in Sources */,
+				AC8444222B15C6BE0084F705 /* AboutAppViewController.swift in Sources */,
 				AC7379192AF12D2F008226C2 /* HistoryNumberOfAdBlockViewController.swift in Sources */,
 				AC7848AF2AD52CB900C61B1A /* Color+Extension.swift in Sources */,
 				AC7848B52AD5722C00C61B1A /* InstructionVC+Extension.swift in Sources */,
@@ -663,8 +676,10 @@
 				AC8159CB2B0FA29700A47257 /* NEOnDemandRuleInterfaceType+CustomStringConvertible.swift in Sources */,
 				AC66508C2AB9ABD500CC8661 /* K_Block.xcdatamodeld in Sources */,
 				AC8159DC2B0FB18100A47257 /* LazyTextField.swift in Sources */,
+				AC8444202B15C63E0084F705 /* DesignSettingViewController.swift in Sources */,
 				AC682B8F2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift in Sources */,
 				AC8159C72B0FA24B00A47257 /* NEOnDemandRuleInterfaceType+CaseIterable.swift in Sources */,
+				AC84441E2B15C60E0084F705 /* AccountViewController.swift in Sources */,
 				AC8159BF2B0FA18F00A47257 /* Bundle+displayName.swift in Sources */,
 				ACE313E62AF3A3E1005B792E /* Dictionary+Extension.swift in Sources */,
 				AC6CC2C32AF4B7930015AE70 /* LoginSerialCodeModel.swift in Sources */,
@@ -678,6 +693,7 @@
 				AC1A10B62AD6A14E0014EBEF /* HomeViewController+Extension.swift in Sources */,
 				AC5A61AA2AC1ABB800844DFF /* InstructionViewController.swift in Sources */,
 				AC8159C92B0FA26B00A47257 /* NEOnDemandRuleInterfaceType+Codable.swift in Sources */,
+				ACB500232B1847370029C32F /* OtherTableViewController.swift in Sources */,
 				AC8159CD2B0FA2CC00A47257 /* NEOnDemandRuleInterfaceType+ssidIsUsed.swift in Sources */,
 				AC1FCF342ABC1A14002176A5 /* AuthenticationViewController.swift in Sources */,
 				AC8159BB2B0FA09200A47257 /* Preset.swift in Sources */,

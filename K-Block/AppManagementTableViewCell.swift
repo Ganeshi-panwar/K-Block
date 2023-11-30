@@ -24,7 +24,9 @@ class AppManagementTableViewCell:UITableViewCell{
         
     }
     
-    @IBAction func switchTapped(_ sender: UISwitch) {
+    @IBAction func switchTapped(_ sender: UISwitch){
+        
+        
     }
     
 }
