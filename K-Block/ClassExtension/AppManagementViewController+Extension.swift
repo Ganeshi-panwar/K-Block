@@ -40,28 +40,40 @@ extension AppManagementViewController{
         offButton.layer.cornerRadius = 10
     }
     
-    func fetchInstallApp(){
-        do{
+    func fetchInstallApp() {
+        do {
             let appList = try FileManager.default.contentsOfDirectory(atPath: "/Applications")
-            for appPath in appList{
-                let appname = URL(fileURLWithPath: "/Applications/\(appPath)").lastPathComponent
-                let appIcon = getAppIcon(for: "/Applications/\(appPath)")
-                installedApp.append((name: appname, icon: appIcon , domain: "/Applications/\(appPath)"))
+            for appPath in appList {
+                let appBundleURL = URL(fileURLWithPath: "/Applications/\(appPath)")
+                let appBundle = Bundle(url: appBundleURL)
+
+                if let bundleIdentifier = appBundle?.bundleIdentifier,
+                   let appIcon = getAppIcon(for: bundleIdentifier) {
+                    installedApp.append((name: bundleIdentifier, icon: appIcon, domain: "/Applications/\(appPath)"))
+                }
             }
+
+            // Print installedApp for debugging
+            print("Installed Apps:")
+            for appInfo in installedApp {
+                print("Name: \(appInfo.name), Icon: \(String(describing: appInfo.icon)), Domain: \(appInfo.domain)")
+            }
+
             tableView.reloadData()
-        }catch{
+        } catch {
             print("Error reading directory: \(error)")
         }
     }
-    
-    func getAppIcon(for appPath: String) -> UIImage? {
+
+
+        func getAppIcon(for bundleIdentifier: String) -> UIImage? {
             if let workspaceClass = NSClassFromString("LSApplicationWorkspace") as? NSObject.Type {
                 let sharedWorkspace = workspaceClass.perform(NSSelectorFromString("defaultWorkspace"))?.takeUnretainedValue()
                 let allApplications = sharedWorkspace?.perform(NSSelectorFromString("allApplications"))?.takeUnretainedValue() as? [AnyObject]
 
                 for app in allApplications ?? [] {
                     let appBundleURL = app.perform(NSSelectorFromString("bundleURL"))?.takeUnretainedValue() as? URL
-                    if appBundleURL?.path == appPath {
+                    if appBundleURL?.path == "/Applications/\(bundleIdentifier).app" {
                         if let icon = app.perform(NSSelectorFromString("_applicationIconImage"))?.takeUnretainedValue() as? UIImage {
                             return icon
                         }
@@ -71,8 +83,6 @@ extension AppManagementViewController{
 
             return nil
         }
-
-
 }
     
 

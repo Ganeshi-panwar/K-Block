@@ -10,6 +10,7 @@ import UIKit
 class AppManagementViewController: UIViewController {
     var installedApp: [(name:String , icon:UIImage?, domain:String)] = []
    
+   
 
    
 
@@ -24,7 +25,7 @@ class AppManagementViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       // fetchInstallApp()
+        fetchInstallApp()
         onButton.isHidden = true
         offButton.isHidden = true
         onOffView.isHidden = true
@@ -36,8 +37,7 @@ class AppManagementViewController: UIViewController {
     }
     
     @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
-//        onButton.isHidden = false
-//        offButton.isHidden = false
+
         sender.isSelected = !sender.isSelected
         if sender.isSelected == true{
             onButton.isHidden = false
@@ -58,19 +58,21 @@ class AppManagementViewController: UIViewController {
     }
     
     @IBAction func onButtonTapped(_ sender: UIButton) {
-        print("jhbjhuh")
-        do {
-            if let documentsPath =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                print("Documents Path: \(documentsPath)")
-            } else {
-                print("Unable to retrieve documents path.")
-            }
+        updateSwitchesState(isOn: true)
 
-        } catch {
-            print("Error reading directory: \(error)")
-        }
     }
     
     @IBAction func offButtonTapped(_ sender: UIButton) {
+        updateSwitchesState(isOn: false)
     }
+    
+    
+    private func updateSwitchesState(isOn: Bool) {
+           for cell in tableView.visibleCells {
+               if let managementCell = cell as? AppManagementTableViewCell {
+                   managementCell.switch.isOn = isOn
+               }
+           }
+       }
+       
 }

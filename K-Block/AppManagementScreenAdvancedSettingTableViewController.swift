@@ -11,6 +11,7 @@ class AppManagementScreenAdvancedSettingTableViewController: UITableViewControll
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         
     }

@@ -1273,6 +1273,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="numberOfAdBlocks:" destination="EhK-Sd-xzf" eventType="touchUpInside" id="VU3-Q4-PRj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDk-PT-rGZ">
                                         <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="50"/>
@@ -1281,6 +1284,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="savingCommunicationChargesButtonTapped:" destination="EhK-Sd-xzf" eventType="touchUpInside" id="V5t-Pm-p6J"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1295,6 +1301,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="7"/>
                                             <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="HourButtonTapped:" destination="EhK-Sd-xzf" eventType="touchUpInside" id="p2r-Da-Jp8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddW-Zo-mdu">
                                         <rect key="frame" x="80.666666666666657" y="0.0" width="70.666666666666657" height="31"/>
@@ -1304,6 +1313,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="7"/>
                                             <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="theDayBeforeButtontapped:" destination="EhK-Sd-xzf" eventType="touchUpInside" id="P9K-hW-cMZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-qT-AdS">
                                         <rect key="frame" x="161.33333333333334" y="0.0" width="70.333333333333343" height="31"/>
@@ -1313,6 +1325,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="7"/>
                                             <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="oneWeekButtonTapped:" destination="EhK-Sd-xzf" eventType="touchUpInside" id="3eX-mT-bXd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50l-F5-Vjj">
                                         <rect key="frame" x="241.66666666666666" y="0.0" width="70.666666666666657" height="31"/>
@@ -1322,6 +1337,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="7"/>
                                             <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="oneMothsButtonTapped:" destination="EhK-Sd-xzf" eventType="touchUpInside" id="eNa-mP-CpS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUO-iC-Wj6">
                                         <rect key="frame" x="322.33333333333331" y="0.0" width="70.666666666666686" height="31"/>
@@ -1331,6 +1349,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="7"/>
                                             <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sixMonthsButtonTapped:" destination="EhK-Sd-xzf" eventType="touchUpInside" id="McU-hB-j74"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1346,14 +1367,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lc2-sY-idU">
+                                <rect key="frame" x="0.0" y="103" width="393" height="88"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="5Zz-CU-mFp"/>
+                                    <constraint firstAttribute="width" constant="393" id="XNi-BH-rvF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b5V-HA-oDq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="b5V-HA-oDq" firstAttribute="bottom" secondItem="hoK-yZ-dPu" secondAttribute="bottom" constant="70" id="2i9-jU-3an"/>
+                            <constraint firstItem="lc2-sY-idU" firstAttribute="top" secondItem="b5V-HA-oDq" secondAttribute="top" id="45m-4H-7vp"/>
                             <constraint firstItem="ccm-le-K08" firstAttribute="top" secondItem="b5V-HA-oDq" secondAttribute="top" id="4tQ-aa-ij0"/>
                             <constraint firstItem="LA3-o8-kRr" firstAttribute="top" secondItem="ccm-le-K08" secondAttribute="bottom" constant="5" id="6Df-ns-eCU"/>
                             <constraint firstItem="79I-3I-9Kh" firstAttribute="leading" secondItem="b5V-HA-oDq" secondAttribute="leading" constant="20" id="8yH-pF-8T5"/>
+                            <constraint firstItem="lc2-sY-idU" firstAttribute="trailing" secondItem="b5V-HA-oDq" secondAttribute="trailing" id="Eee-P0-axq"/>
+                            <constraint firstItem="lc2-sY-idU" firstAttribute="leading" secondItem="b5V-HA-oDq" secondAttribute="leading" id="KSb-9g-8sK"/>
                             <constraint firstItem="b5V-HA-oDq" firstAttribute="trailing" secondItem="79I-3I-9Kh" secondAttribute="trailing" constant="20" id="L5I-Pb-5fA"/>
                             <constraint firstItem="hoK-yZ-dPu" firstAttribute="leading" secondItem="b5V-HA-oDq" secondAttribute="leading" constant="16" id="Sgv-wV-L1o"/>
                             <constraint firstItem="79I-3I-9Kh" firstAttribute="top" secondItem="LA3-o8-kRr" secondAttribute="bottom" constant="16" id="bP6-03-ckX"/>
@@ -1366,10 +1398,21 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="uS0-AE-6xu"/>
                     <navigationItem key="navigationItem" title="History" id="kAA-DF-YYO"/>
+                    <connections>
+                        <outlet property="nubmerOdAdblock" destination="Nos-Gg-NeK" id="hts-kh-F7g"/>
+                        <outlet property="savingCommunicationTime" destination="vDk-PT-rGZ" id="Xgd-zr-WNA"/>
+                        <outletCollection property="switching" destination="bVB-KG-WWw" collectionClass="NSMutableArray" id="Pxr-cD-9bb"/>
+                        <outletCollection property="switching" destination="ddW-Zo-mdu" collectionClass="NSMutableArray" id="cjv-ZV-kqc"/>
+                        <outletCollection property="switching" destination="ddW-Zo-mdu" collectionClass="NSMutableArray" id="AW9-qa-efm"/>
+                        <outletCollection property="switching" destination="cxy-qT-AdS" collectionClass="NSMutableArray" id="ryg-Cq-zp4"/>
+                        <outletCollection property="switching" destination="cxy-qT-AdS" collectionClass="NSMutableArray" id="qfV-q6-vZl"/>
+                        <outletCollection property="switching" destination="50l-F5-Vjj" collectionClass="NSMutableArray" id="zcp-QF-7If"/>
+                        <outletCollection property="switching" destination="EUO-iC-Wj6" collectionClass="NSMutableArray" id="WLl-Lz-B17"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ky-ac-JIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3543" y="1778"/>
+            <point key="canvasLocation" x="3542.7480916030531" y="1777.4647887323945"/>
         </scene>
         <!--Other-->
         <scene sceneID="VTi-QR-Muw">
@@ -2273,6 +2316,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

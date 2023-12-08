@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3400F01317D8A39B162972E0 /* Pods_K_Block_K_BlockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA64F9DD8CB5789F6D35444D /* Pods_K_Block_K_BlockUITests.framework */; };
+		745ED2062B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745ED2052B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift */; };
 		AC1A10B62AD6A14E0014EBEF /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A10B52AD6A14E0014EBEF /* HomeViewController+Extension.swift */; };
 		AC1FCF322ABC1300002176A5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FCF312ABC1300002176A5 /* LogInViewController.swift */; };
 		AC1FCF342ABC1A14002176A5 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FCF332ABC1A14002176A5 /* AuthenticationViewController.swift */; };
@@ -91,6 +92,7 @@
 		077C8B008F9D4B9C0E3FD323 /* Pods-K-BlockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-BlockTests.debug.xcconfig"; path = "Target Support Files/Pods-K-BlockTests/Pods-K-BlockTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29A536A1345435C91C166435 /* Pods_K_BlockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_BlockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D359A5B37F7B12E7D546819 /* Pods-K-BlockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-BlockTests.release.xcconfig"; path = "Target Support Files/Pods-K-BlockTests/Pods-K-BlockTests.release.xcconfig"; sourceTree = "<group>"; };
+		745ED2052B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryNumberOfAdBlockViewController+Extension.swift"; sourceTree = "<group>"; };
 		7DE0630A575B53AFC3CBF6CA /* Pods-K-Block.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-Block.release.xcconfig"; path = "Target Support Files/Pods-K-Block/Pods-K-Block.release.xcconfig"; sourceTree = "<group>"; };
 		7E6C22133503074B70462550 /* Pods-K-Block.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-Block.debug.xcconfig"; path = "Target Support Files/Pods-K-Block/Pods-K-Block.debug.xcconfig"; sourceTree = "<group>"; };
 		AC1A10B52AD6A14E0014EBEF /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				AC682B8A2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift */,
 				AC76299D2AEB8B6000D0648A /* BlacListViewController+Extension.swift */,
 				AC7379162AF10446008226C2 /* AppManagementViewController+Extension.swift */,
+				745ED2052B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift */,
 			);
 			path = ClassExtension;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				AC5A61AA2AC1ABB800844DFF /* InstructionViewController.swift in Sources */,
 				AC8159C92B0FA26B00A47257 /* NEOnDemandRuleInterfaceType+Codable.swift in Sources */,
 				ACB500232B1847370029C32F /* OtherTableViewController.swift in Sources */,
+				745ED2062B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift in Sources */,
 				AC8159CD2B0FA2CC00A47257 /* NEOnDemandRuleInterfaceType+ssidIsUsed.swift in Sources */,
 				AC1FCF342ABC1A14002176A5 /* AuthenticationViewController.swift in Sources */,
 				AC8159BB2B0FA09200A47257 /* Preset.swift in Sources */,
