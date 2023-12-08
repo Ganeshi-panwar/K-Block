@@ -9,7 +9,10 @@ import UIKit
 
 class AppManagementViewController: UIViewController {
     var installedApp: [(name:String , icon:UIImage?, domain:String)] = []
-    
+   
+   
+
+   
 
     @IBOutlet var dataUseLbl: UILabel!
     @IBOutlet var domainName: UILabel!
@@ -34,8 +37,7 @@ class AppManagementViewController: UIViewController {
     }
     
     @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
-//        onButton.isHidden = false
-//        offButton.isHidden = false
+
         sender.isSelected = !sender.isSelected
         if sender.isSelected == true{
             onButton.isHidden = false
@@ -56,8 +58,21 @@ class AppManagementViewController: UIViewController {
     }
     
     @IBAction func onButtonTapped(_ sender: UIButton) {
+        updateSwitchesState(isOn: true)
+
     }
     
     @IBAction func offButtonTapped(_ sender: UIButton) {
+        updateSwitchesState(isOn: false)
     }
+    
+    
+    private func updateSwitchesState(isOn: Bool) {
+           for cell in tableView.visibleCells {
+               if let managementCell = cell as? AppManagementTableViewCell {
+                   managementCell.switch.isOn = isOn
+               }
+           }
+       }
+       
 }

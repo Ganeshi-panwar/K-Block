@@ -18,6 +18,10 @@ class AuthenticationViewController: UIViewController {
         if let userId = UserDefaults.standard.string(forKey: "LogInId"){
             self.homeViewController()
         }
+        if let deviceId = UserDefaults.standard.string(forKey: "deviceId")
+        {
+            print("deviceiddddd :\(deviceId)")
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -39,10 +43,16 @@ class AuthenticationViewController: UIViewController {
     
     func callLogInAPI() {
         guard let code = self.txtSerialCode.text else { return }
+       
         //        let deviceId = UIDevice.current.identifierForVendor?.uuidString
         if let deviceId = UIDevice.current.identifierForVendor?.uuidString {
+            UserDefaults.standard.set(deviceId, forKey: "deviceId")
+           // print("the device id is :\(deviceId)")
+            
             // Use deviceId safely within this scope
             let parameters: [String: Any] = ["code": code, "deviceid": deviceId]
+            UserDefaults.standard.set(code, forKey: "Code")
+            print(code)
             
             let urlString = "https://test-kblock-api.communitylinks.co.jp/users"
             

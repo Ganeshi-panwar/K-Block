@@ -13,16 +13,14 @@ extension AppManagementViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let managementCell = tableView.dequeueReusableCell(withIdentifier: "AppManagementTableViewCell") as!
-        AppManagementTableViewCell
-              
-            let app = installedApp[indexPath.row]
+        let managementCell = tableView.dequeueReusableCell(withIdentifier: "AppManagementTableViewCell") as! AppManagementTableViewCell
+        let appInfo = installedApp[indexPath.row]
+           managementCell.domainName.text = appInfo.name
+           managementCell.iconImage.image = appInfo.icon
+           managementCell.dataTrafficLbl.text = appInfo.domain
 
-               managementCell.dataTrafficLbl.text = app.name
-               managementCell.iconImage.image = app.icon
-               managementCell.domainName.text = app.domain
-      
-
+        
+        
         return managementCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -41,47 +39,50 @@ extension AppManagementViewController{
         onButton.layer.cornerRadius = 10
         offButton.layer.cornerRadius = 10
     }
+    
     func fetchInstallApp() {
-        let workspace = NSClassFromString("LSApplicationWorkspace") as! NSObject.Type
-        let sharedWorkspace = workspace.perform(NSSelectorFromString("defaultWorkspace"))?.takeUnretainedValue() as! NSObject
+        do {
+            let appList = try FileManager.default.contentsOfDirectory(atPath: "/Applications")
+            for appPath in appList {
+                let appBundleURL = URL(fileURLWithPath: "/Applications/\(appPath)")
+                let appBundle = Bundle(url: appBundleURL)
 
-        if let allApps = sharedWorkspace.perform(NSSelectorFromString("allApplications"))?.takeUnretainedValue() as? [AnyObject] {
-            installedApp = allApps.compactMap { app in
-                guard
-                    let appName = app.perform(NSSelectorFromString("localizedName"))?.takeUnretainedValue() as? String,
-                    let bundleIdentifier = app.perform(NSSelectorFromString("bundleIdentifier"))?.takeUnretainedValue() as? String,
-                    let appIcon = fetchAppIcon(for: bundleIdentifier),
-                    let domain = "example.com" as? String  // Replace with actual domain information
-                else {
-                    return nil
+                if let bundleIdentifier = appBundle?.bundleIdentifier,
+                   let appIcon = getAppIcon(for: bundleIdentifier) {
+                    installedApp.append((name: bundleIdentifier, icon: appIcon, domain: "/Applications/\(appPath)"))
                 }
-
-                return (name: appName, icon: appIcon, domain: domain)
             }
-        }
 
-        tableView.reloadData()
+            // Print installedApp for debugging
+            print("Installed Apps:")
+            for appInfo in installedApp {
+                print("Name: \(appInfo.name), Icon: \(String(describing: appInfo.icon)), Domain: \(appInfo.domain)")
+            }
+
+            tableView.reloadData()
+        } catch {
+            print("Error reading directory: \(error)")
+        }
     }
 
 
-    func fetchAppIcon(for bundleIdentifier: String) -> UIImage? {
-        guard
-            let workspaceClass = NSClassFromString("LSApplicationWorkspace") as? NSObject.Type,
-            let workspace = workspaceClass.perform(NSSelectorFromString("defaultWorkspace"))?.takeUnretainedValue() as? NSObject,
-            let icon = workspace.perform(NSSelectorFromString("iconForApplicationIdentifier:"), with: bundleIdentifier)?.takeUnretainedValue()
-        else {
+        func getAppIcon(for bundleIdentifier: String) -> UIImage? {
+            if let workspaceClass = NSClassFromString("LSApplicationWorkspace") as? NSObject.Type {
+                let sharedWorkspace = workspaceClass.perform(NSSelectorFromString("defaultWorkspace"))?.takeUnretainedValue()
+                let allApplications = sharedWorkspace?.perform(NSSelectorFromString("allApplications"))?.takeUnretainedValue() as? [AnyObject]
+
+                for app in allApplications ?? [] {
+                    let appBundleURL = app.perform(NSSelectorFromString("bundleURL"))?.takeUnretainedValue() as? URL
+                    if appBundleURL?.path == "/Applications/\(bundleIdentifier).app" {
+                        if let icon = app.perform(NSSelectorFromString("_applicationIconImage"))?.takeUnretainedValue() as? UIImage {
+                            return icon
+                        }
+                    }
+                }
+            }
+
             return nil
         }
-
-        if let appIconData = icon.perform(NSSelectorFromString("getPNGData"))?.takeUnretainedValue() as? Data {
-            return UIImage(data: appIconData)
-        }
-
-        return nil
-    }
-
-
-
 }
     
 

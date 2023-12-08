@@ -58,12 +58,12 @@ class BlackListViewController: UIViewController {
         }
         
     }
+    
     @objc func deleteButtonTapped(){
         blackListArr.remove(elementsAtIndices: deleteIndex)
         deleteIndex.removeAll()
         print(deleteIndex)
         tableView.reloadData()
         blackCustomView.isHidden = true
-        
     }
 }

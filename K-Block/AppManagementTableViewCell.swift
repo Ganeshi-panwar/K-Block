@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 class AppManagementTableViewCell:UITableViewCell{
     
     @IBOutlet var `switch`: UISwitch!
@@ -21,9 +22,12 @@ class AppManagementTableViewCell:UITableViewCell{
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
+        
     }
     
-    @IBAction func switchTapped(_ sender: UISwitch) {
+    @IBAction func switchTapped(_ sender: UISwitch){
+        print(("click me"))
+        
     }
     
 }

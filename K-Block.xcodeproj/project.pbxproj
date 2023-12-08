@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3400F01317D8A39B162972E0 /* Pods_K_Block_K_BlockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA64F9DD8CB5789F6D35444D /* Pods_K_Block_K_BlockUITests.framework */; };
+		745ED2062B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745ED2052B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift */; };
 		AC1A10B62AD6A14E0014EBEF /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A10B52AD6A14E0014EBEF /* HomeViewController+Extension.swift */; };
 		AC1FCF322ABC1300002176A5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FCF312ABC1300002176A5 /* LogInViewController.swift */; };
 		AC1FCF342ABC1A14002176A5 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FCF332ABC1A14002176A5 /* AuthenticationViewController.swift */; };
@@ -41,6 +42,27 @@
 		AC7848AF2AD52CB900C61B1A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7848AE2AD52CB900C61B1A /* Color+Extension.swift */; };
 		AC7848B52AD5722C00C61B1A /* InstructionVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7848B42AD5722C00C61B1A /* InstructionVC+Extension.swift */; };
 		AC80CC682AFCE29500428DC8 /* HandalVPNConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80CC672AFCE29500428DC8 /* HandalVPNConnection.swift */; };
+		AC8159BB2B0FA09200A47257 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159BA2B0FA09200A47257 /* Preset.swift */; };
+		AC8159BD2B0FA13B00A47257 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159BC2B0FA13B00A47257 /* Resolver.swift */; };
+		AC8159BF2B0FA18F00A47257 /* Bundle+displayName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159BE2B0FA18F00A47257 /* Bundle+displayName.swift */; };
+		AC8159C12B0FA1BF00A47257 /* NEOnDemandRuleAction+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159C02B0FA1BF00A47257 /* NEOnDemandRuleAction+CaseIterable.swift */; };
+		AC8159C52B0FA21800A47257 /* NEOnDemandRuleAction+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159C42B0FA21800A47257 /* NEOnDemandRuleAction+CustomStringConvertible.swift */; };
+		AC8159C72B0FA24B00A47257 /* NEOnDemandRuleInterfaceType+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159C62B0FA24B00A47257 /* NEOnDemandRuleInterfaceType+CaseIterable.swift */; };
+		AC8159C92B0FA26B00A47257 /* NEOnDemandRuleInterfaceType+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159C82B0FA26B00A47257 /* NEOnDemandRuleInterfaceType+Codable.swift */; };
+		AC8159CB2B0FA29700A47257 /* NEOnDemandRuleInterfaceType+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159CA2B0FA29700A47257 /* NEOnDemandRuleInterfaceType+CustomStringConvertible.swift */; };
+		AC8159CD2B0FA2CC00A47257 /* NEOnDemandRuleInterfaceType+ssidIsUsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159CC2B0FA2CC00A47257 /* NEOnDemandRuleInterfaceType+ssidIsUsed.swift */; };
+		AC8159CF2B0FAB3100A47257 /* NEOnDemandRuleAction+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159CE2B0FAB3100A47257 /* NEOnDemandRuleAction+Codable.swift */; };
+		AC8159D82B0FB18100A47257 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D12B0FB18000A47257 /* RuleView.swift */; };
+		AC8159D92B0FB18100A47257 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D22B0FB18000A47257 /* DetailView.swift */; };
+		AC8159DA2B0FB18100A47257 /* DoTSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D32B0FB18000A47257 /* DoTSections.swift */; };
+		AC8159DB2B0FB18100A47257 /* DoHSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D42B0FB18000A47257 /* DoHSections.swift */; };
+		AC8159DC2B0FB18100A47257 /* LazyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D52B0FB18000A47257 /* LazyTextField.swift */; };
+		AC8159DD2B0FB18100A47257 /* HowToActivateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D62B0FB18000A47257 /* HowToActivateView.swift */; };
+		AC8159DE2B0FB18100A47257 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8159D72B0FB18000A47257 /* ContentView.swift */; };
+		AC84441E2B15C60E0084F705 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84441D2B15C60E0084F705 /* AccountViewController.swift */; };
+		AC8444202B15C63E0084F705 /* DesignSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84441F2B15C63E0084F705 /* DesignSettingViewController.swift */; };
+		AC8444222B15C6BE0084F705 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8444212B15C6BE0084F705 /* AboutAppViewController.swift */; };
+		ACB500232B1847370029C32F /* OtherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB500222B1847370029C32F /* OtherTableViewController.swift */; };
 		ACE313E62AF3A3E1005B792E /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE313E52AF3A3E1005B792E /* Dictionary+Extension.swift */; };
 		ACE9C9482AEA91C400A33316 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9C9472AEA91C400A33316 /* Array+Extension.swift */; };
 		ACEB603F2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB603E2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift */; };
@@ -70,6 +92,7 @@
 		077C8B008F9D4B9C0E3FD323 /* Pods-K-BlockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-BlockTests.debug.xcconfig"; path = "Target Support Files/Pods-K-BlockTests/Pods-K-BlockTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29A536A1345435C91C166435 /* Pods_K_BlockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_BlockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D359A5B37F7B12E7D546819 /* Pods-K-BlockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-BlockTests.release.xcconfig"; path = "Target Support Files/Pods-K-BlockTests/Pods-K-BlockTests.release.xcconfig"; sourceTree = "<group>"; };
+		745ED2052B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryNumberOfAdBlockViewController+Extension.swift"; sourceTree = "<group>"; };
 		7DE0630A575B53AFC3CBF6CA /* Pods-K-Block.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-Block.release.xcconfig"; path = "Target Support Files/Pods-K-Block/Pods-K-Block.release.xcconfig"; sourceTree = "<group>"; };
 		7E6C22133503074B70462550 /* Pods-K-Block.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K-Block.debug.xcconfig"; path = "Target Support Files/Pods-K-Block/Pods-K-Block.debug.xcconfig"; sourceTree = "<group>"; };
 		AC1A10B52AD6A14E0014EBEF /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -110,6 +133,27 @@
 		AC7848AE2AD52CB900C61B1A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		AC7848B42AD5722C00C61B1A /* InstructionVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstructionVC+Extension.swift"; sourceTree = "<group>"; };
 		AC80CC672AFCE29500428DC8 /* HandalVPNConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandalVPNConnection.swift; sourceTree = "<group>"; };
+		AC8159BA2B0FA09200A47257 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
+		AC8159BC2B0FA13B00A47257 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		AC8159BE2B0FA18F00A47257 /* Bundle+displayName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+displayName.swift"; sourceTree = "<group>"; };
+		AC8159C02B0FA1BF00A47257 /* NEOnDemandRuleAction+CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEOnDemandRuleAction+CaseIterable.swift"; sourceTree = "<group>"; };
+		AC8159C42B0FA21800A47257 /* NEOnDemandRuleAction+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEOnDemandRuleAction+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		AC8159C62B0FA24B00A47257 /* NEOnDemandRuleInterfaceType+CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEOnDemandRuleInterfaceType+CaseIterable.swift"; sourceTree = "<group>"; };
+		AC8159C82B0FA26B00A47257 /* NEOnDemandRuleInterfaceType+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEOnDemandRuleInterfaceType+Codable.swift"; sourceTree = "<group>"; };
+		AC8159CA2B0FA29700A47257 /* NEOnDemandRuleInterfaceType+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEOnDemandRuleInterfaceType+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		AC8159CC2B0FA2CC00A47257 /* NEOnDemandRuleInterfaceType+ssidIsUsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEOnDemandRuleInterfaceType+ssidIsUsed.swift"; sourceTree = "<group>"; };
+		AC8159CE2B0FAB3100A47257 /* NEOnDemandRuleAction+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEOnDemandRuleAction+Codable.swift"; sourceTree = "<group>"; };
+		AC8159D12B0FB18000A47257 /* RuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
+		AC8159D22B0FB18000A47257 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		AC8159D32B0FB18000A47257 /* DoTSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoTSections.swift; sourceTree = "<group>"; };
+		AC8159D42B0FB18000A47257 /* DoHSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoHSections.swift; sourceTree = "<group>"; };
+		AC8159D52B0FB18000A47257 /* LazyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTextField.swift; sourceTree = "<group>"; };
+		AC8159D62B0FB18000A47257 /* HowToActivateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToActivateView.swift; sourceTree = "<group>"; };
+		AC8159D72B0FB18000A47257 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC84441D2B15C60E0084F705 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AC84441F2B15C63E0084F705 /* DesignSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSettingViewController.swift; sourceTree = "<group>"; };
+		AC8444212B15C6BE0084F705 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		ACB500222B1847370029C32F /* OtherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTableViewController.swift; sourceTree = "<group>"; };
 		ACE313E52AF3A3E1005B792E /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		ACE9C9472AEA91C400A33316 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		ACEB603E2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManagementScreenAdvancedSettingTableViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +230,10 @@
 				AC7379142AF10056008226C2 /* AppManagementViewController.swift */,
 				AC7379182AF12D2F008226C2 /* HistoryNumberOfAdBlockViewController.swift */,
 				ACEB603E2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift */,
+				ACB500222B1847370029C32F /* OtherTableViewController.swift */,
+				AC84441D2B15C60E0084F705 /* AccountViewController.swift */,
+				AC84441F2B15C63E0084F705 /* DesignSettingViewController.swift */,
+				AC8444212B15C6BE0084F705 /* AboutAppViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -248,10 +296,12 @@
 		AC6650802AB9ABD500CC8661 /* K-Block */ = {
 			isa = PBXGroup;
 			children = (
+				AC8159D02B0FB18000A47257 /* Views */,
 				AC6125DD2AFB623800BA273C /* Core */,
 				AC6125D92AFB606800BA273C /* Utils */,
 				AC682B8C2ADFBF3A00FC2665 /* CostomClasses */,
 				AC75D33E2ABC9E600088B845 /* Extension */,
+				AC71A4C22B0C750A001FF343 /* ServerExtension */,
 				AC7848B02AD5494300C61B1A /* Model */,
 				AC1FCF302ABC1299002176A5 /* View */,
 				AC1FCF2F2ABC1280002176A5 /* Controller */,
@@ -300,6 +350,21 @@
 			path = CustomTableViewCell;
 			sourceTree = "<group>";
 		};
+		AC71A4C22B0C750A001FF343 /* ServerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AC8159BE2B0FA18F00A47257 /* Bundle+displayName.swift */,
+				AC8159C02B0FA1BF00A47257 /* NEOnDemandRuleAction+CaseIterable.swift */,
+				AC8159CE2B0FAB3100A47257 /* NEOnDemandRuleAction+Codable.swift */,
+				AC8159C42B0FA21800A47257 /* NEOnDemandRuleAction+CustomStringConvertible.swift */,
+				AC8159C62B0FA24B00A47257 /* NEOnDemandRuleInterfaceType+CaseIterable.swift */,
+				AC8159C82B0FA26B00A47257 /* NEOnDemandRuleInterfaceType+Codable.swift */,
+				AC8159CA2B0FA29700A47257 /* NEOnDemandRuleInterfaceType+CustomStringConvertible.swift */,
+				AC8159CC2B0FA2CC00A47257 /* NEOnDemandRuleInterfaceType+ssidIsUsed.swift */,
+			);
+			path = ServerExtension;
+			sourceTree = "<group>";
+		};
 		AC75D33E2ABC9E600088B845 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				AC6CC2C22AF4B7930015AE70 /* LoginSerialCodeModel.swift */,
+				AC8159BA2B0FA09200A47257 /* Preset.swift */,
+				AC8159BC2B0FA13B00A47257 /* Resolver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,8 +396,23 @@
 				AC682B8A2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift */,
 				AC76299D2AEB8B6000D0648A /* BlacListViewController+Extension.swift */,
 				AC7379162AF10446008226C2 /* AppManagementViewController+Extension.swift */,
+				745ED2052B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift */,
 			);
 			path = ClassExtension;
+			sourceTree = "<group>";
+		};
+		AC8159D02B0FB18000A47257 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC8159D12B0FB18000A47257 /* RuleView.swift */,
+				AC8159D22B0FB18000A47257 /* DetailView.swift */,
+				AC8159D32B0FB18000A47257 /* DoTSections.swift */,
+				AC8159D42B0FB18000A47257 /* DoHSections.swift */,
+				AC8159D52B0FB18000A47257 /* LazyTextField.swift */,
+				AC8159D62B0FB18000A47257 /* HowToActivateView.swift */,
+				AC8159D72B0FB18000A47257 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,9 +654,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8159DB2B0FB18100A47257 /* DoHSections.swift in Sources */,
 				AC80CC682AFCE29500428DC8 /* HandalVPNConnection.swift in Sources */,
+				AC8159DE2B0FB18100A47257 /* ContentView.swift in Sources */,
 				AC6125D82AFB4C3E00BA273C /* TabBarViewController.swift in Sources */,
 				ACFE611B2ADFB5790089DECB /* WhiteListViewController.swift in Sources */,
+				AC8159DA2B0FB18100A47257 /* DoTSections.swift in Sources */,
 				AC682B8B2ADFBDE900FC2665 /* WhiteListViewController+Extension.swift in Sources */,
 				AC6F32BE2AE927FB00DF471C /* BlackListViewController.swift in Sources */,
 				AC7379172AF10446008226C2 /* AppManagementViewController+Extension.swift in Sources */,
@@ -583,24 +668,43 @@
 				AC682B912ADFFAF200FC2665 /* UIButton+Extension.swift in Sources */,
 				AC6125DC2AFB60E000BA273C /* VPNConfigurationManager.swift in Sources */,
 				AC76299E2AEB8B6000D0648A /* BlacListViewController+Extension.swift in Sources */,
+				AC8444222B15C6BE0084F705 /* AboutAppViewController.swift in Sources */,
 				AC7379192AF12D2F008226C2 /* HistoryNumberOfAdBlockViewController.swift in Sources */,
 				AC7848AF2AD52CB900C61B1A /* Color+Extension.swift in Sources */,
 				AC7848B52AD5722C00C61B1A /* InstructionVC+Extension.swift in Sources */,
 				AC7629A02AEBB30600D0648A /* UIView+Extension.swift in Sources */,
+				AC8159DD2B0FB18100A47257 /* HowToActivateView.swift in Sources */,
 				ACEB603F2AF211A600CCEC83 /* AppManagementScreenAdvancedSettingTableViewController.swift in Sources */,
+				AC8159C52B0FA21800A47257 /* NEOnDemandRuleAction+CustomStringConvertible.swift in Sources */,
+				AC8159CB2B0FA29700A47257 /* NEOnDemandRuleInterfaceType+CustomStringConvertible.swift in Sources */,
 				AC66508C2AB9ABD500CC8661 /* K_Block.xcdatamodeld in Sources */,
+				AC8159DC2B0FB18100A47257 /* LazyTextField.swift in Sources */,
+				AC8444202B15C63E0084F705 /* DesignSettingViewController.swift in Sources */,
 				AC682B8F2ADFBFFD00FC2665 /* WhiteListTableViewCell.swift in Sources */,
+				AC8159C72B0FA24B00A47257 /* NEOnDemandRuleInterfaceType+CaseIterable.swift in Sources */,
+				AC84441E2B15C60E0084F705 /* AccountViewController.swift in Sources */,
+				AC8159BF2B0FA18F00A47257 /* Bundle+displayName.swift in Sources */,
 				ACE313E62AF3A3E1005B792E /* Dictionary+Extension.swift in Sources */,
 				AC6CC2C32AF4B7930015AE70 /* LoginSerialCodeModel.swift in Sources */,
+				AC8159D82B0FB18100A47257 /* RuleView.swift in Sources */,
+				AC8159D92B0FB18100A47257 /* DetailView.swift in Sources */,
 				AC7379152AF10056008226C2 /* AppManagementViewController.swift in Sources */,
+				AC8159BD2B0FA13B00A47257 /* Resolver.swift in Sources */,
 				AC61555D2AF267AF00150293 /* AppManagementTableViewCell.swift in Sources */,
 				ACE9C9482AEA91C400A33316 /* Array+Extension.swift in Sources */,
 				AC71BD172ADEE67F007D6DA1 /* ListTableViewController.swift in Sources */,
 				AC1A10B62AD6A14E0014EBEF /* HomeViewController+Extension.swift in Sources */,
 				AC5A61AA2AC1ABB800844DFF /* InstructionViewController.swift in Sources */,
+				AC8159C92B0FA26B00A47257 /* NEOnDemandRuleInterfaceType+Codable.swift in Sources */,
+				ACB500232B1847370029C32F /* OtherTableViewController.swift in Sources */,
+				745ED2062B2319B90048F39B /* HistoryNumberOfAdBlockViewController+Extension.swift in Sources */,
+				AC8159CD2B0FA2CC00A47257 /* NEOnDemandRuleInterfaceType+ssidIsUsed.swift in Sources */,
 				AC1FCF342ABC1A14002176A5 /* AuthenticationViewController.swift in Sources */,
+				AC8159BB2B0FA09200A47257 /* Preset.swift in Sources */,
+				AC8159C12B0FA1BF00A47257 /* NEOnDemandRuleAction+CaseIterable.swift in Sources */,
 				AC2D63A42AC441DF00476646 /* HomeViewController.swift in Sources */,
 				AC75D3402ABC9EC00088B845 /* AlertController +Extension.swift in Sources */,
+				AC8159CF2B0FAB3100A47257 /* NEOnDemandRuleAction+Codable.swift in Sources */,
 				AC6650822AB9ABD500CC8661 /* AppDelegate.swift in Sources */,
 				AC6650842AB9ABD500CC8661 /* SceneDelegate.swift in Sources */,
 			);
@@ -708,7 +812,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -762,7 +866,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -784,11 +888,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "K-Block/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -814,11 +918,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "K-Block/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
