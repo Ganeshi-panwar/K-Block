@@ -26,6 +26,7 @@ class AppManagementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchInstallApp()
+        tableView.reloadData()
         onButton.isHidden = true
         offButton.isHidden = true
         onOffView.isHidden = true

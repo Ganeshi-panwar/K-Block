@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MobileCoreServices
 import UIKit
 extension AppManagementViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
